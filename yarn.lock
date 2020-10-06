@@ -9021,11 +9021,17 @@ strapi-plugin-email@3.1.7:
     strapi-provider-email-sendmail "3.1.7"
     strapi-utils "3.1.7"
 
-strapi-plugin-upload@3.1.7:
-  version "3.1.7"
-  resolved "https://registry.yarnpkg.com/strapi-plugin-upload/-/strapi-plugin-upload-3.1.7.tgz#736b0ccb48cff17a7bf9399df1d47f10ef269a4a"
-  integrity sha512-BpvElVonbMplBmZMDCHP3ewMv2XHr6WZk/DGwxEnNjoPCHVaL+hyDGrzGmTPkUceegvFKx7eIw08T+/FYqbMEA==
+strapi-plugin-upload@3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/strapi-plugin-upload/-/strapi-plugin-upload-3.2.0.tgz#f0b495134cf99aeb9280a3656990570befa2cf2b"
+  integrity sha512-NJUM1oyOnQaM2NroILD3AYwEoc7QyX75swtrTaxmFxwVkPS4+PDsvcIqX/kwbn2iUvMlLQ87rVbq9F8Nxt8Kpw==
   dependencies:
+    "@buffetjs/core" "3.3.1"
+    "@buffetjs/custom" "3.3.1"
+    "@buffetjs/hooks" "3.3.1"
+    "@buffetjs/icons" "3.3.1"
+    "@buffetjs/styles" "3.3.1"
+    "@buffetjs/utils" "3.3.1"
     byte-size "^6.2.0"
     cropperjs "^1.5.6"
     immer "^7.0.8"
@@ -9044,9 +9050,9 @@ strapi-plugin-upload@3.1.7:
     react-router-dom "^5.0.0"
     reactstrap "8.4.1"
     sharp "0.26.0"
-    strapi-helper-plugin "3.1.7"
-    strapi-provider-upload-local "3.1.7"
-    strapi-utils "3.1.7"
+    strapi-helper-plugin "3.2.0"
+    strapi-provider-upload-local "3.2.0"
+    strapi-utils "3.2.0"
     stream-to-array "^2.3.0"
     uuid "^3.2.1"
 
@@ -9090,10 +9096,10 @@ strapi-provider-email-sendmail@3.1.7:
     sendmail "^1.6.1"
     strapi-utils "3.1.7"
 
-strapi-provider-upload-local@3.1.7:
-  version "3.1.7"
-  resolved "https://registry.yarnpkg.com/strapi-provider-upload-local/-/strapi-provider-upload-local-3.1.7.tgz#e6ecf2c3f6da531cfb2b1a310c9d32924731e05e"
-  integrity sha512-uAhzy2OQERn4MQwPrcSk8MRQaL4TfhWTQUSFnESyCAU/enX2t2hjXZWTVvlN81aDDW0VR8TwRkUs4cpJhTh14g==
+strapi-provider-upload-local@3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/strapi-provider-upload-local/-/strapi-provider-upload-local-3.2.0.tgz#71587138e7f1aa68bd680a0a094caf8ea95c5c8d"
+  integrity sha512-Vbk0zzD2V2mp4nsZ24Mgyhz575YdrXaB1cMhEAGp1hBmJIE13XhhT2NYUlU7P4iQuXmYqDp6rI57n5qcSbuGMA==
 
 strapi-utils@3.1.7:
   version "3.1.7"
