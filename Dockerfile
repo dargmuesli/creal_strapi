@@ -6,12 +6,12 @@ RUN apk update && apk add build-base gcc autoconf automake zlib-dev libpng-dev n
 ARG NODE_ENV=development
 ENV NODE_ENV=${NODE_ENV}
 WORKDIR /srv/
-COPY ./package.json ./pnpm-lock.yaml ./
+COPY ./pnpm-lock.yaml ./
 ENV PATH /srv/node_modules/.bin:$PATH
-RUN pnpm config set network-timeout 600000 -g && pnpm install
+RUN pnpm config set network-timeout 600000 -g && pnpm fetch
 WORKDIR /srv/app
 COPY ./ .
-RUN pnpm build
+RUN pnpm install --offline && pnpm build
 EXPOSE 1337
 CMD pnpm && pnpm develop
 
