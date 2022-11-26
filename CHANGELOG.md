@@ -1,3 +1,16 @@
+# [2.5.0](https://github.com/dargmuesli/creal_strapi/compare/2.4.9...2.5.0) (2022-11-26)
+
+
+### Bug Fixes
+
+* **docker:** install dependencies ([9472c69](https://github.com/dargmuesli/creal_strapi/commit/9472c69a7d4b1a4514ca7bdadb9a91f869bb2308))
+* **pnpm:** shamefully hoist ([2192bb4](https://github.com/dargmuesli/creal_strapi/commit/2192bb48cac02ddd1b7c1d772c613127d351db74))
+
+
+### Features
+
+* **package:** migrate to pnpm ([044e6db](https://github.com/dargmuesli/creal_strapi/commit/044e6dbbe3cb71b75e5c67b0e38cc2a7e33607e1))
+
 ## [2.4.9](https://github.com/dargmuesli/creal_strapi/compare/2.4.8...2.4.9) (2022-11-14)
 
 
