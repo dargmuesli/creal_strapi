@@ -5,6 +5,7 @@
   "scheduleVersion": "2.4.9",
   "description": "Headless API CMS for cReal's website.",
   "author": "Jonas Thelemann <e-mail@jonas-thelemann.de>",
+  "packageManager": "pnpm@7.17.0",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -13,10 +14,16 @@
     "prepare": "if [ -d '.git' ] && [ -d '.husky' ]; then husky install && shx rm -rf .git/hooks && shx ln -s ../.husky .git/hooks; fi"
   },
   "devDependencies": {
+    "@babel/core": "7.20.2",
     "@commitlint/cli": "17.3.0",
     "@commitlint/config-conventional": "17.3.0",
     "husky": "8.0.2",
-    "shx": "0.3.4"
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
+    "react-is": "16.12.0",
+    "redux": "4.2.0",
+    "shx": "0.3.4",
+    "webpack": "5.75.0"
   },
   "dependencies": {
     "@strapi/plugin-i18n": "4.5.2",
