@@ -13,7 +13,7 @@ WORKDIR /srv/app
 COPY ./ .
 RUN pnpm install --offline && pnpm build
 EXPOSE 1337
-CMD pnpm && pnpm develop
+CMD pnpm install && pnpm develop
 
 FROM node:18.12.1-alpine@sha256:67373bd5d90ea600cb5f0fa58d7a5a4e6ebf50b6e05c50c1d1cc22df5134db43
 RUN apk add vips-dev \
