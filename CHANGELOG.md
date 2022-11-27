@@ -1,3 +1,10 @@
+## [2.5.1](https://github.com/dargmuesli/creal_strapi/compare/2.5.0...2.5.1) (2022-11-27)
+
+
+### Bug Fixes
+
+* **docker:** correct command ([2d6579e](https://github.com/dargmuesli/creal_strapi/commit/2d6579e3af7e72d620ee5d0484aac850091830b8))
+
 # [2.5.0](https://github.com/dargmuesli/creal_strapi/compare/2.4.9...2.5.0) (2022-11-26)
 
 
