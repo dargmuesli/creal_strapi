@@ -1,5 +1,11 @@
 {
   "extends": [
     "github>dargmuesli/renovate-config"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["react", "react-dom", "react-is"],
+      "allowedVersions": "<18"
+    }
   ]
 }
