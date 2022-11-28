@@ -1,3 +1,12 @@
+## [2.5.2](https://github.com/dargmuesli/creal_strapi/compare/2.5.1...2.5.2) (2022-11-28)
+
+
+### Bug Fixes
+
+* **admin:** temporarily disable strapi-plugin-config-sync ([9e213f6](https://github.com/dargmuesli/creal_strapi/commit/9e213f650d05016161b4910039cf988a23e6a2c5))
+* **docker:** add entrypoint ([b92694a](https://github.com/dargmuesli/creal_strapi/commit/b92694a167624b890bb2475ef8806e00e7c224a9))
+* downgrade react ([2a7b971](https://github.com/dargmuesli/creal_strapi/commit/2a7b9718c71c23aa50b9e3882e85e8b52fb5d225))
+
 ## [2.5.1](https://github.com/dargmuesli/creal_strapi/compare/2.5.0...2.5.1) (2022-11-27)
 
 
