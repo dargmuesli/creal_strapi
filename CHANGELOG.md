@@ -1,3 +1,11 @@
+## [2.5.3](https://github.com/dargmuesli/creal_strapi/compare/2.5.2...2.5.3) (2022-12-13)
+
+
+### Bug Fixes
+
+* **commitlint:** allow long body lines on ci ([4acf837](https://github.com/dargmuesli/creal_strapi/commit/4acf83778b4bbad160eca277e8d72c7e13e11d51))
+* **release:** schedule release ([2d12c98](https://github.com/dargmuesli/creal_strapi/commit/2d12c98c948a57eec58fa0fd815541f8afc5e21d))
+
 ## [2.5.2](https://github.com/dargmuesli/creal_strapi/compare/2.5.1...2.5.2) (2022-11-28)
 
 
