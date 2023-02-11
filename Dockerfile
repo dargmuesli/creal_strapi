@@ -1,4 +1,4 @@
-FROM node:19.6.0-alpine@sha256:33b1776fe39dc085cb3706eb032848e98a8fe108f9fed3e617afbd68b556bf1e AS development
+FROM node:19.6.0-alpine@sha256:ebd018afea26341e981ce1b01d6859a5d185b2d840f89c075239e3b7e6e92715 AS development
 
 RUN npm install -g pnpm
 
@@ -19,7 +19,7 @@ CMD ["pnpm", "run", "develop"]
 # Build
 
 # Should be the specific version of `node:alpine`.
-FROM node:19.6.0-alpine@sha256:33b1776fe39dc085cb3706eb032848e98a8fe108f9fed3e617afbd68b556bf1e AS build
+FROM node:19.6.0-alpine@sha256:ebd018afea26341e981ce1b01d6859a5d185b2d840f89c075239e3b7e6e92715 AS build
 
 # Installing libvips-dev for sharp Compatability
 RUN apk update && apk add build-base gcc autoconf automake zlib-dev libpng-dev nasm bash vips-dev \
@@ -44,7 +44,7 @@ RUN pnpm install --offline
 
 
 ################################################################################
-FROM node:19.6.0-alpine@sha256:33b1776fe39dc085cb3706eb032848e98a8fe108f9fed3e617afbd68b556bf1e
+FROM node:19.6.0-alpine@sha256:ebd018afea26341e981ce1b01d6859a5d185b2d840f89c075239e3b7e6e92715
 
 RUN apk add vips-dev \
   && rm -rf /var/cache/apk/* \
