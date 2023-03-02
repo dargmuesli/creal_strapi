@@ -1,3 +1,10 @@
+## [2.5.9](https://github.com/dargmuesli/creal_strapi/compare/2.5.8...2.5.9) (2023-03-02)
+
+
+### Bug Fixes
+
+* **deps:** reenable strapi-plugin-config-sync ([d6220fc](https://github.com/dargmuesli/creal_strapi/commit/d6220fc5f4eb639fbbc174c312d53f845ae4f641)), closes [#48](https://github.com/dargmuesli/creal_strapi/issues/48)
+
 ## [2.5.8](https://github.com/dargmuesli/creal_strapi/compare/2.5.7...2.5.8) (2023-02-17)
 
 
