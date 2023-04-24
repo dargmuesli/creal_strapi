@@ -42,9 +42,6 @@ devDependencies:
   redux:
     specifier: 4.2.1
     version: 4.2.1
-  shx:
-    specifier: 0.3.4
-    version: 0.3.4
   styled-components:
     specifier: 5.3.10
     version: 5.3.10(react-dom@17.0.2)(react-is@17.0.2)(react@17.0.2)
@@ -6227,6 +6224,7 @@ packages:
       minimatch: 3.1.2
       once: 1.4.0
       path-is-absolute: 1.0.1
+    dev: false
 
   /global-dirs@0.1.1:
     resolution: {integrity: sha512-NknMLn7F2J7aflwFOlGdNIuCDpN3VGoSoB+aap3KABFWbHVn1TCgFC+np23J8W2BiZbjfEw3BFBycSMv1AFblg==}
@@ -6793,6 +6791,7 @@ packages:
   /interpret@1.4.0:
     resolution: {integrity: sha512-agE4QfB2Lkp9uICn7BAqoscw4SZP9kTE2hxiFI3jBPmXJfdqiahTbUuKGsMoN2GtqL9AxhYioAcVvgsb1HvRbA==}
     engines: {node: '>= 0.10'}
+    dev: false
 
   /interpret@2.2.0:
     resolution: {integrity: sha512-Ju0Bz/cEia55xDwUWEa8+olFpCiQoypjnQySseKtmjNrnps3P+xfpUmGr90T7yjlVJmOtybRvPXhKMbHr+fWnw==}
@@ -9279,6 +9278,7 @@ packages:
     engines: {node: '>= 0.10'}
     dependencies:
       resolve: 1.22.2
+    dev: false
 
   /rechoir@0.8.0:
     resolution: {integrity: sha512-/vxpCXddiX8NGfGO/mTafwjq4aFa/71pvamip0++IQk3zG8cbCj0fifNPrjjF1XMXUne91jL9OoxmdykoEtifQ==}
@@ -9830,15 +9830,7 @@ packages:
       glob: 7.2.3
       interpret: 1.4.0
       rechoir: 0.6.2
-
-  /shx@0.3.4:
-    resolution: {integrity: sha512-N6A9MLVqjxZYcVn8hLmtneQWIJtp8IKzMP4eMnx+nqkvXoqinUPCbUFLp2UcWTEIUONhlk0ewxr/jaVGlc+J+g==}
-    engines: {node: '>=6'}
-    hasBin: true
-    dependencies:
-      minimist: 1.2.8
-      shelljs: 0.8.5
-    dev: true
+    dev: false
 
   /side-channel@1.0.4:
     resolution: {integrity: sha512-q5XPytqFEIKHkGdiMIrY10mvLRvnQh42/+GoBlFW3b2LXLE2xxJpZFdm94we0BaoV3RwJyGqg5wS7epxTv0Zvw==}

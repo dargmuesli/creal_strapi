@@ -10,7 +10,7 @@
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi",
-    "prepare": "if [ \"$NODE_ENV\" != \"production\" ]; then husky install && shx rm -rf .git/hooks && shx ln -s ../.husky .git/hooks; fi"
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@babel/core": "7.21.4",
@@ -21,7 +21,6 @@
     "react-dom": "17.0.2",
     "react-is": "17.0.2",
     "redux": "4.2.1",
-    "shx": "0.3.4",
     "styled-components": "5.3.10",
     "webpack": "5.80.0"
   },
