@@ -1,6 +1,6 @@
 FROM node:20.0.0-alpine@sha256:2ffec31a58e85fbcd575c544a3584f6f4d128779e6b856153a04366b8dd01bb0 AS development
 
-RUN npm install -g pnpm
+RUN corepack enable
 
 COPY ./docker/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
@@ -24,13 +24,13 @@ FROM node:20.0.0-alpine@sha256:2ffec31a58e85fbcd575c544a3584f6f4d128779e6b856153
 # Installing libvips-dev for sharp Compatability
 RUN apk update && apk add build-base gcc autoconf automake zlib-dev libpng-dev nasm bash vips-dev \
   && rm -rf /var/cache/apk/* > /dev/null 2>&1 \
-  && npm install -g pnpm
+  && corepack enable
 
 WORKDIR /srv/app/
 
 COPY ./pnpm-lock.yaml ./
 
-RUN npm install -g pnpm && \
+RUN corepack enable && \
     pnpm fetch
 
 COPY ./ ./
@@ -48,7 +48,7 @@ FROM node:20.0.0-alpine@sha256:2ffec31a58e85fbcd575c544a3584f6f4d128779e6b856153
 
 RUN apk add vips-dev \
   && rm -rf /var/cache/apk/* \
-  && npm install -g pnpm
+  && corepack enable
 
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
