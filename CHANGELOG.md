@@ -1,3 +1,10 @@
+## [2.5.14](https://github.com/dargmuesli/creal_strapi/compare/2.5.13...2.5.14) (2023-04-24)
+
+
+### Bug Fixes
+
+* **package:** correct prepare script ([cda74d2](https://github.com/dargmuesli/creal_strapi/commit/cda74d2493f338a9c8cf0335bd64e0935f94db13))
+
 ## [2.5.13](https://github.com/dargmuesli/creal_strapi/compare/2.5.12...2.5.13) (2023-04-21)
 
 
