@@ -21,6 +21,9 @@ CMD ["pnpm", "run", "develop"]
 # Should be the specific version of `node:alpine`.
 FROM node:20.0.0-alpine@sha256:2ffec31a58e85fbcd575c544a3584f6f4d128779e6b856153a04366b8dd01bb0 AS build
 
+# The `CI` environment variable must be set for pnpm to run in headless mode
+ENV CI=true
+
 # Installing libvips-dev for sharp Compatability
 RUN apk update && apk add build-base gcc autoconf automake zlib-dev libpng-dev nasm bash vips-dev \
   && rm -rf /var/cache/apk/* > /dev/null 2>&1 \
