@@ -1,3 +1,10 @@
+## [2.5.16](https://github.com/dargmuesli/creal_strapi/compare/2.5.15...2.5.16) (2023-05-05)
+
+
+### Bug Fixes
+
+* schedule release ([1942bfa](https://github.com/dargmuesli/creal_strapi/commit/1942bfa8aa2caef01856524de9333715dd9cf063))
+
 ## [2.5.15](https://github.com/dargmuesli/creal_strapi/compare/2.5.14...2.5.15) (2023-04-25)
 
 
