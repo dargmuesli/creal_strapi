@@ -1,4 +1,4 @@
-FROM node:20.1.0-alpine@sha256:71073d3b7ad12dc871ecf42a865699914efd738fe797fa16f67a22179f46d039 AS development
+FROM node:20.2.0-alpine@sha256:f25b0e9d3d116e267d4ff69a3a99c0f4cf6ae94eadd87f1bf7bd68ea3ff0bef7 AS development
 
 RUN corepack enable
 
@@ -18,7 +18,7 @@ CMD ["pnpm", "run", "develop"]
 ################################################################################
 # Build
 
-FROM node:20.1.0-alpine@sha256:71073d3b7ad12dc871ecf42a865699914efd738fe797fa16f67a22179f46d039 AS build
+FROM node:20.2.0-alpine@sha256:f25b0e9d3d116e267d4ff69a3a99c0f4cf6ae94eadd87f1bf7bd68ea3ff0bef7 AS build
 
 # The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
@@ -46,7 +46,7 @@ RUN pnpm install --offline
 
 
 ################################################################################
-FROM node:20.1.0-alpine@sha256:71073d3b7ad12dc871ecf42a865699914efd738fe797fa16f67a22179f46d039
+FROM node:20.2.0-alpine@sha256:f25b0e9d3d116e267d4ff69a3a99c0f4cf6ae94eadd87f1bf7bd68ea3ff0bef7
 
 RUN apk add vips-dev \
   && rm -rf /var/cache/apk/* \
