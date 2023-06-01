@@ -1,3 +1,10 @@
+## [2.5.20](https://github.com/dargmuesli/creal_strapi/compare/2.5.19...2.5.20) (2023-06-01)
+
+
+### Bug Fixes
+
+* **deps:** use path-to-regexp v1.7.0 ([5b03219](https://github.com/dargmuesli/creal_strapi/commit/5b032192d1ef533348fe5546ae9dde72ea336650))
+
 ## [2.5.19](https://github.com/dargmuesli/creal_strapi/compare/2.5.18...2.5.19) (2023-05-29)
 
 
