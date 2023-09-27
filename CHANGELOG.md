@@ -1,3 +1,10 @@
+## [2.6.0](https://github.com/dargmuesli/creal_strapi/compare/2.5.29...2.6.0) (2023-09-27)
+
+
+### Features
+
+* **config:** add transfer token salt ([ae46b0d](https://github.com/dargmuesli/creal_strapi/commit/ae46b0d1b7d0dea0ac7cc73181f473ef55b16fec))
+
 ## [2.5.29](https://github.com/dargmuesli/creal_strapi/compare/2.5.28...2.5.29) (2023-09-15)
 
 
