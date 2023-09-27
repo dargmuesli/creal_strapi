@@ -25,6 +25,11 @@ module.exports = ({ env }) => {
       secret: env('ADMIN_JWT_SECRET'),
     },
     host: '0.0.0.0',
+    transfer: {
+      token: {
+        salt: env('ADMIN_JWT_SECRET_FILE'),
+      },
+    },
     watchIgnoreFiles: [
       '**/config/sync/**',
     ],
