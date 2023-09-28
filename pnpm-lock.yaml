@@ -13,7 +13,7 @@ dependencies:
     version: 4.14.0(@babel/runtime@7.22.15)(@codemirror/autocomplete@6.9.1)(@codemirror/language@6.9.1)(@codemirror/lint@6.4.2)(@codemirror/search@6.5.4)(@codemirror/state@6.2.1)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.20.1)(codemirror@6.0.1)(react-dom@18.2.0)(react-router-dom@5.3.4)(react@18.2.0)(redux@4.2.1)(styled-components@5.3.3)(typescript@5.2.2)
   '@strapi/strapi':
     specifier: 4.14.0
-    version: 4.14.0(@babel/core@7.22.20)(@babel/runtime@7.22.15)(@codemirror/autocomplete@6.9.1)(@codemirror/language@6.9.1)(@codemirror/lint@6.4.2)(@codemirror/search@6.5.4)(@codemirror/state@6.2.1)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.20.1)(@types/node@20.4.7)(codemirror@6.0.1)(jest@29.7.0)(pg@8.11.3)(react-dom@18.2.0)(react-router-dom@5.3.4)(react@18.2.0)(redux@4.2.1)(styled-components@5.3.3)
+    version: 4.14.0(@babel/core@7.22.20)(@babel/runtime@7.22.15)(@codemirror/autocomplete@6.9.1)(@codemirror/language@6.9.1)(@codemirror/lint@6.4.2)(@codemirror/search@6.5.4)(@codemirror/state@6.2.1)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.20.1)(@types/node@20.5.1)(codemirror@6.0.1)(jest@29.7.0)(pg@8.11.3)(react-dom@18.2.0)(react-router-dom@5.3.4)(react@18.2.0)(redux@4.2.1)(styled-components@5.3.3)
   pg:
     specifier: 8.11.3
     version: 8.11.3
@@ -23,8 +23,8 @@ dependencies:
 
 devDependencies:
   '@commitlint/cli':
-    specifier: 17.7.1
-    version: 17.7.1
+    specifier: 17.7.2
+    version: 17.7.2
   '@commitlint/config-conventional':
     specifier: 17.7.0
     version: 17.7.0
@@ -505,14 +505,14 @@ packages:
     engines: {node: '>=0.1.90'}
     dev: false
 
-  /@commitlint/cli@17.7.1:
-    resolution: {integrity: sha512-BCm/AT06SNCQtvFv921iNhudOHuY16LswT0R3OeolVGLk8oP+Rk9TfQfgjH7QPMjhvp76bNqGFEcpKojxUNW1g==}
+  /@commitlint/cli@17.7.2:
+    resolution: {integrity: sha512-t3N7TZq7lOeqTOyEgfGcaltHqEJf7YDlPg75MldeVPPyz14jZq/+mbGF9tueDLFX8R6RwdymrN6D+U5XwZ8Iwg==}
     engines: {node: '>=v14'}
     hasBin: true
     dependencies:
       '@commitlint/format': 17.4.4
       '@commitlint/lint': 17.7.0
-      '@commitlint/load': 17.7.1
+      '@commitlint/load': 17.7.2
       '@commitlint/read': 17.5.1
       '@commitlint/types': 17.4.4
       execa: 5.1.1
@@ -583,23 +583,23 @@ packages:
       '@commitlint/types': 17.4.4
     dev: true
 
-  /@commitlint/load@17.7.1:
-    resolution: {integrity: sha512-S/QSOjE1ztdogYj61p6n3UbkUvweR17FQ0zDbNtoTLc+Hz7vvfS7ehoTMQ27hPSjVBpp7SzEcOQu081RLjKHJQ==}
+  /@commitlint/load@17.7.2:
+    resolution: {integrity: sha512-XA7WTnsjHZ4YH6ZYsrnxgLdXzriwMMq+utZUET6spbOEEIPBCDLdOQXS26P+v3TTO4hUHOEhzUquaBv3jbBixw==}
     engines: {node: '>=v14'}
     dependencies:
       '@commitlint/config-validator': 17.6.7
       '@commitlint/execute-rule': 17.4.0
       '@commitlint/resolve-extends': 17.6.7
       '@commitlint/types': 17.4.4
-      '@types/node': 20.4.7
+      '@types/node': 20.5.1
       chalk: 4.1.2
       cosmiconfig: 8.3.6(typescript@5.2.2)
-      cosmiconfig-typescript-loader: 4.4.0(@types/node@20.4.7)(cosmiconfig@8.3.6)(ts-node@10.9.1)(typescript@5.2.2)
+      cosmiconfig-typescript-loader: 4.4.0(@types/node@20.5.1)(cosmiconfig@8.3.6)(ts-node@10.9.1)(typescript@5.2.2)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
       resolve-from: 5.0.0
-      ts-node: 10.9.1(@types/node@20.4.7)(typescript@5.2.2)
+      ts-node: 10.9.1(@types/node@20.5.1)(typescript@5.2.2)
       typescript: 5.2.2
     transitivePeerDependencies:
       - '@swc/core'
@@ -2377,7 +2377,7 @@ packages:
       '@sinonjs/commons': 3.0.0
     dev: false
 
-  /@strapi/admin@4.14.0(@babel/core@7.22.20)(@babel/runtime@7.22.15)(@codemirror/autocomplete@6.9.1)(@codemirror/language@6.9.1)(@codemirror/lint@6.4.2)(@codemirror/search@6.5.4)(@codemirror/state@6.2.1)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.20.1)(@strapi/strapi@4.14.0)(@types/node@20.4.7)(codemirror@5.65.15)(debug@4.3.4)(jest@29.7.0)(pg@8.11.3):
+  /@strapi/admin@4.14.0(@babel/core@7.22.20)(@babel/runtime@7.22.15)(@codemirror/autocomplete@6.9.1)(@codemirror/language@6.9.1)(@codemirror/lint@6.4.2)(@codemirror/search@6.5.4)(@codemirror/state@6.2.1)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.20.1)(@strapi/strapi@4.14.0)(@types/node@20.5.1)(codemirror@5.65.15)(debug@4.3.4)(jest@29.7.0)(pg@8.11.3):
     resolution: {integrity: sha512-e3tpsEepxTEHbWI3kKJhyT9k9A5Uhxg4CXLv2vfIp8czldmdwHFwc5RO59ZM9Zo+To3O692TzZOy6vnhBBwyHA==}
     engines: {node: '>=16.0.0 <=20.x.x', npm: '>=6.0.0'}
     peerDependencies:
@@ -2392,7 +2392,7 @@ packages:
       '@strapi/icons': 1.11.0(react-dom@18.2.0)(react@18.2.0)
       '@strapi/permissions': 4.14.0
       '@strapi/provider-audit-logs-local': 4.14.0
-      '@strapi/strapi': 4.14.0(@babel/core@7.22.20)(@babel/runtime@7.22.15)(@codemirror/autocomplete@6.9.1)(@codemirror/language@6.9.1)(@codemirror/lint@6.4.2)(@codemirror/search@6.5.4)(@codemirror/state@6.2.1)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.20.1)(@types/node@20.4.7)(codemirror@6.0.1)(jest@29.7.0)(pg@8.11.3)(react-dom@18.2.0)(react-router-dom@5.3.4)(react@18.2.0)(redux@4.2.1)(styled-components@5.3.3)
+      '@strapi/strapi': 4.14.0(@babel/core@7.22.20)(@babel/runtime@7.22.15)(@codemirror/autocomplete@6.9.1)(@codemirror/language@6.9.1)(@codemirror/lint@6.4.2)(@codemirror/search@6.5.4)(@codemirror/state@6.2.1)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.20.1)(@types/node@20.5.1)(codemirror@6.0.1)(jest@29.7.0)(pg@8.11.3)(react-dom@18.2.0)(react-router-dom@5.3.4)(react@18.2.0)(redux@4.2.1)(styled-components@5.3.3)
       '@strapi/typescript-utils': 4.14.0
       '@strapi/utils': 4.14.0
       axios: 1.5.0(debug@4.3.4)
@@ -2445,7 +2445,7 @@ packages:
       prop-types: 15.8.1
       qs: 6.11.1
       react: 18.2.0
-      react-dnd: 15.1.2(@types/node@20.4.7)(react@18.2.0)
+      react-dnd: 15.1.2(@types/node@20.5.1)(react@18.2.0)
       react-dnd-html5-backend: 15.1.3
       react-dom: 18.2.0(react@18.2.0)
       react-error-boundary: 3.1.4(react@18.2.0)
@@ -2527,7 +2527,7 @@ packages:
       '@strapi/strapi': ^4.13.7
     dependencies:
       '@strapi/logger': 4.14.0
-      '@strapi/strapi': 4.14.0(@babel/core@7.22.20)(@babel/runtime@7.22.15)(@codemirror/autocomplete@6.9.1)(@codemirror/language@6.9.1)(@codemirror/lint@6.4.2)(@codemirror/search@6.5.4)(@codemirror/state@6.2.1)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.20.1)(@types/node@20.4.7)(codemirror@6.0.1)(jest@29.7.0)(pg@8.11.3)(react-dom@18.2.0)(react-router-dom@5.3.4)(react@18.2.0)(redux@4.2.1)(styled-components@5.3.3)
+      '@strapi/strapi': 4.14.0(@babel/core@7.22.20)(@babel/runtime@7.22.15)(@codemirror/autocomplete@6.9.1)(@codemirror/language@6.9.1)(@codemirror/lint@6.4.2)(@codemirror/search@6.5.4)(@codemirror/state@6.2.1)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.20.1)(@types/node@20.5.1)(codemirror@6.0.1)(jest@29.7.0)(pg@8.11.3)(react-dom@18.2.0)(react-router-dom@5.3.4)(react@18.2.0)(redux@4.2.1)(styled-components@5.3.3)
       '@strapi/types': 4.14.0(jest@29.7.0)(pg@8.11.3)(typescript@5.2.2)
       '@strapi/utils': 4.14.0
       chalk: 4.1.2
@@ -2942,7 +2942,7 @@ packages:
       - typescript
     dev: false
 
-  /@strapi/plugin-upload@4.14.0(@babel/runtime@7.22.15)(@codemirror/autocomplete@6.9.1)(@codemirror/language@6.9.1)(@codemirror/lint@6.4.2)(@codemirror/search@6.5.4)(@codemirror/state@6.2.1)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.20.1)(@types/node@20.4.7)(codemirror@6.0.1)(debug@4.3.4)(react-dom@18.2.0)(react-router-dom@5.3.4)(react@18.2.0)(redux@4.2.1)(styled-components@5.3.3)(typescript@5.2.2):
+  /@strapi/plugin-upload@4.14.0(@babel/runtime@7.22.15)(@codemirror/autocomplete@6.9.1)(@codemirror/language@6.9.1)(@codemirror/lint@6.4.2)(@codemirror/search@6.5.4)(@codemirror/state@6.2.1)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.20.1)(@types/node@20.5.1)(codemirror@6.0.1)(debug@4.3.4)(react-dom@18.2.0)(react-router-dom@5.3.4)(react@18.2.0)(redux@4.2.1)(styled-components@5.3.3)(typescript@5.2.2):
     resolution: {integrity: sha512-C+r0Pn4eFoUGC1cQUgvau/HIkXt2BeYTeNKqQ00RFrDy8NvXAdCCuHohRrmKbJl4LEb3lJAMkp2gmUaB8WClWg==}
     engines: {node: '>=16.0.0 <=20.x.x', npm: '>=6.0.0'}
     peerDependencies:
@@ -2970,7 +2970,7 @@ packages:
       prop-types: 15.8.1
       qs: 6.11.1
       react: 18.2.0
-      react-dnd: 15.1.2(@types/node@20.4.7)(react@18.2.0)
+      react-dnd: 15.1.2(@types/node@20.5.1)(react@18.2.0)
       react-dom: 18.2.0(react@18.2.0)
       react-helmet: 6.1.0(react@18.2.0)
       react-intl: 6.4.1(react@18.2.0)(typescript@5.2.2)
@@ -3078,7 +3078,7 @@ packages:
       fs-extra: 10.0.0
     dev: false
 
-  /@strapi/strapi@4.14.0(@babel/core@7.22.20)(@babel/runtime@7.22.15)(@codemirror/autocomplete@6.9.1)(@codemirror/language@6.9.1)(@codemirror/lint@6.4.2)(@codemirror/search@6.5.4)(@codemirror/state@6.2.1)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.20.1)(@types/node@20.4.7)(codemirror@6.0.1)(jest@29.7.0)(pg@8.11.3)(react-dom@18.2.0)(react-router-dom@5.3.4)(react@18.2.0)(redux@4.2.1)(styled-components@5.3.3):
+  /@strapi/strapi@4.14.0(@babel/core@7.22.20)(@babel/runtime@7.22.15)(@codemirror/autocomplete@6.9.1)(@codemirror/language@6.9.1)(@codemirror/lint@6.4.2)(@codemirror/search@6.5.4)(@codemirror/state@6.2.1)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.20.1)(@types/node@20.5.1)(codemirror@6.0.1)(jest@29.7.0)(pg@8.11.3)(react-dom@18.2.0)(react-router-dom@5.3.4)(react@18.2.0)(redux@4.2.1)(styled-components@5.3.3):
     resolution: {integrity: sha512-J7WFXAJaMkrz/SHknjyKqqzARiUjtaGvHD1I30Ynhdta65gXKchjtXd4RPcI8hhGE+3kdaIz56b7aCM+XmnupA==}
     engines: {node: '>=16.0.0 <=20.x.x', npm: '>=6.0.0'}
     hasBin: true
@@ -3086,7 +3086,7 @@ packages:
     dependencies:
       '@koa/cors': 3.4.3
       '@koa/router': 10.1.1
-      '@strapi/admin': 4.14.0(@babel/core@7.22.20)(@babel/runtime@7.22.15)(@codemirror/autocomplete@6.9.1)(@codemirror/language@6.9.1)(@codemirror/lint@6.4.2)(@codemirror/search@6.5.4)(@codemirror/state@6.2.1)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.20.1)(@strapi/strapi@4.14.0)(@types/node@20.4.7)(codemirror@5.65.15)(debug@4.3.4)(jest@29.7.0)(pg@8.11.3)
+      '@strapi/admin': 4.14.0(@babel/core@7.22.20)(@babel/runtime@7.22.15)(@codemirror/autocomplete@6.9.1)(@codemirror/language@6.9.1)(@codemirror/lint@6.4.2)(@codemirror/search@6.5.4)(@codemirror/state@6.2.1)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.20.1)(@strapi/strapi@4.14.0)(@types/node@20.5.1)(codemirror@5.65.15)(debug@4.3.4)(jest@29.7.0)(pg@8.11.3)
       '@strapi/data-transfer': 4.14.0(@strapi/strapi@4.14.0)(jest@29.7.0)(pg@8.11.3)(typescript@5.2.2)
       '@strapi/database': 4.14.0(pg@8.11.3)
       '@strapi/generate-new': 4.14.0
@@ -3096,7 +3096,7 @@ packages:
       '@strapi/plugin-content-manager': 4.14.0
       '@strapi/plugin-content-type-builder': 4.14.0(@babel/runtime@7.22.15)(@codemirror/autocomplete@6.9.1)(@codemirror/language@6.9.1)(@codemirror/lint@6.4.2)(@codemirror/search@6.5.4)(@codemirror/state@6.2.1)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.20.1)(codemirror@6.0.1)(debug@4.3.4)(react-dom@18.2.0)(react-router-dom@5.3.4)(react@18.2.0)(styled-components@5.3.3)(typescript@5.2.2)
       '@strapi/plugin-email': 4.14.0(@babel/runtime@7.22.15)(@codemirror/autocomplete@6.9.1)(@codemirror/language@6.9.1)(@codemirror/lint@6.4.2)(@codemirror/search@6.5.4)(@codemirror/state@6.2.1)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.20.1)(codemirror@6.0.1)(react-dom@18.2.0)(react-router-dom@5.3.4)(react@18.2.0)(styled-components@5.3.3)(typescript@5.2.2)
-      '@strapi/plugin-upload': 4.14.0(@babel/runtime@7.22.15)(@codemirror/autocomplete@6.9.1)(@codemirror/language@6.9.1)(@codemirror/lint@6.4.2)(@codemirror/search@6.5.4)(@codemirror/state@6.2.1)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.20.1)(@types/node@20.4.7)(codemirror@6.0.1)(debug@4.3.4)(react-dom@18.2.0)(react-router-dom@5.3.4)(react@18.2.0)(redux@4.2.1)(styled-components@5.3.3)(typescript@5.2.2)
+      '@strapi/plugin-upload': 4.14.0(@babel/runtime@7.22.15)(@codemirror/autocomplete@6.9.1)(@codemirror/language@6.9.1)(@codemirror/lint@6.4.2)(@codemirror/search@6.5.4)(@codemirror/state@6.2.1)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.20.1)(@types/node@20.5.1)(codemirror@6.0.1)(debug@4.3.4)(react-dom@18.2.0)(react-router-dom@5.3.4)(react@18.2.0)(redux@4.2.1)(styled-components@5.3.3)(typescript@5.2.2)
       '@strapi/types': 4.14.0(jest@29.7.0)(pg@8.11.3)(typescript@5.2.2)
       '@strapi/typescript-utils': 4.14.0
       '@strapi/utils': 4.14.0
@@ -3143,7 +3143,7 @@ packages:
       semver: 7.5.4
       statuses: 2.0.1
       typescript: 5.2.2
-      vite: 4.4.9(@types/node@20.4.7)
+      vite: 4.4.9(@types/node@20.5.1)
       yup: 0.32.9
     transitivePeerDependencies:
       - '@babel/core'
@@ -3536,8 +3536,8 @@ packages:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
     dev: true
 
-  /@types/node@20.4.7:
-    resolution: {integrity: sha512-bUBrPjEry2QUTsnuEjzjbS7voGWCc30W0qzgMf90GPeDGFRakvrz47ju+oqDAKCXLUCe39u57/ORMl/O/04/9g==}
+  /@types/node@20.5.1:
+    resolution: {integrity: sha512-4tT2UrL5LBqDwoed9wZ6N3umC4Yhz3W3FloMmiiG4JwmUJWpie0c7lcnUNd4gtMKuDEO4wRVS8B6Xa0uMRsMKg==}
 
   /@types/node@20.6.5:
     resolution: {integrity: sha512-2qGq5LAOTh9izcc0+F+dToFigBWiK1phKPt7rNhOqJSr35y8rlIBjDwGtFSgAI6MGIhjwOVNSQZVdJsZJ2uR1w==}
@@ -3761,7 +3761,7 @@ packages:
       '@babel/plugin-transform-react-jsx-source': 7.22.5(@babel/core@7.22.20)
       '@types/babel__core': 7.20.2
       react-refresh: 0.14.0
-      vite: 4.4.9(@types/node@20.4.7)
+      vite: 4.4.9(@types/node@20.5.1)
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -5126,7 +5126,7 @@ packages:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
     dev: false
 
-  /cosmiconfig-typescript-loader@4.4.0(@types/node@20.4.7)(cosmiconfig@8.3.6)(ts-node@10.9.1)(typescript@5.2.2):
+  /cosmiconfig-typescript-loader@4.4.0(@types/node@20.5.1)(cosmiconfig@8.3.6)(ts-node@10.9.1)(typescript@5.2.2):
     resolution: {integrity: sha512-BabizFdC3wBHhbI4kJh0VkQP9GkBfoHPydD0COMce1nJ1kJAB3F2TmJ/I7diULBKtmEWSwEbuN/KDtgnmUUVmw==}
     engines: {node: '>=v14.21.3'}
     peerDependencies:
@@ -5135,9 +5135,9 @@ packages:
       ts-node: '>=10'
       typescript: '>=4'
     dependencies:
-      '@types/node': 20.4.7
+      '@types/node': 20.5.1
       cosmiconfig: 8.3.6(typescript@5.2.2)
-      ts-node: 10.9.1(@types/node@20.4.7)(typescript@5.2.2)
+      ts-node: 10.9.1(@types/node@20.5.1)(typescript@5.2.2)
       typescript: 5.2.2
     dev: true
 
@@ -5174,7 +5174,7 @@ packages:
       buffer: 5.7.1
     dev: false
 
-  /create-jest@29.7.0(@types/node@20.4.7)(ts-node@10.9.1):
+  /create-jest@29.7.0(@types/node@20.5.1)(ts-node@10.9.1):
     resolution: {integrity: sha512-Adz2bdH0Vq3F53KEMJOoftQFutWCukm6J24wbPWRO4k1kMY7gS7ds/uoJkNuV8wDCtWWnuwGcJwpWcih+zEW1Q==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     hasBin: true
@@ -5183,7 +5183,7 @@ packages:
       chalk: 4.1.2
       exit: 0.1.2
       graceful-fs: 4.2.11
-      jest-config: 29.7.0(@types/node@20.4.7)(ts-node@10.9.1)
+      jest-config: 29.7.0(@types/node@20.5.1)(ts-node@10.9.1)
       jest-util: 29.7.0
       prompts: 2.4.2
     transitivePeerDependencies:
@@ -7489,7 +7489,7 @@ packages:
       - supports-color
     dev: false
 
-  /jest-cli@29.7.0(@types/node@20.4.7)(ts-node@10.9.1):
+  /jest-cli@29.7.0(@types/node@20.5.1)(ts-node@10.9.1):
     resolution: {integrity: sha512-OVVobw2IubN/GSYsxETi+gOe7Ka59EFMR/twOU3Jb2GnKKeMGJB5SGUUrEz3SFVmJASUdZUzy83sLNNQ2gZslg==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     hasBin: true
@@ -7503,10 +7503,10 @@ packages:
       '@jest/test-result': 29.7.0
       '@jest/types': 29.6.3
       chalk: 4.1.2
-      create-jest: 29.7.0(@types/node@20.4.7)(ts-node@10.9.1)
+      create-jest: 29.7.0(@types/node@20.5.1)(ts-node@10.9.1)
       exit: 0.1.2
       import-local: 3.1.0
-      jest-config: 29.7.0(@types/node@20.4.7)(ts-node@10.9.1)
+      jest-config: 29.7.0(@types/node@20.5.1)(ts-node@10.9.1)
       jest-util: 29.7.0
       jest-validate: 29.7.0
       yargs: 17.7.2
@@ -7517,7 +7517,7 @@ packages:
       - ts-node
     dev: false
 
-  /jest-config@29.7.0(@types/node@20.4.7)(ts-node@10.9.1):
+  /jest-config@29.7.0(@types/node@20.5.1)(ts-node@10.9.1):
     resolution: {integrity: sha512-uXbpfeQ7R6TZBqI3/TxCU4q4ttk3u0PJeC+E0zbfSoSjq6bJ7buBPxzQPL0ifrkY4DNu4JUdk0ImlBUYi840eQ==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     peerDependencies:
@@ -7532,7 +7532,7 @@ packages:
       '@babel/core': 7.22.20
       '@jest/test-sequencer': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 20.4.7
+      '@types/node': 20.5.1
       babel-jest: 29.7.0(@babel/core@7.22.20)
       chalk: 4.1.2
       ci-info: 3.8.0
@@ -7552,7 +7552,7 @@ packages:
       pretty-format: 29.7.0
       slash: 3.0.0
       strip-json-comments: 3.1.1
-      ts-node: 10.9.1(@types/node@20.4.7)(typescript@5.2.2)
+      ts-node: 10.9.1(@types/node@20.5.1)(typescript@5.2.2)
     transitivePeerDependencies:
       - babel-plugin-macros
       - supports-color
@@ -7593,7 +7593,7 @@ packages:
       pretty-format: 29.7.0
       slash: 3.0.0
       strip-json-comments: 3.1.1
-      ts-node: 10.9.1(@types/node@20.4.7)(typescript@5.2.2)
+      ts-node: 10.9.1(@types/node@20.5.1)(typescript@5.2.2)
     transitivePeerDependencies:
       - babel-plugin-macros
       - supports-color
@@ -7891,7 +7891,7 @@ packages:
       supports-color: 8.1.1
     dev: false
 
-  /jest@29.7.0(@types/node@20.4.7)(ts-node@10.9.1):
+  /jest@29.7.0(@types/node@20.5.1)(ts-node@10.9.1):
     resolution: {integrity: sha512-NIy3oAFp9shda19hy4HK0HRTWKtPJmGdnvywu01nOqNC2vZg+Z+fvJDxpMQA88eb2I9EcafcdjYgsDthnYTvGw==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     hasBin: true
@@ -7904,7 +7904,7 @@ packages:
       '@jest/core': 29.7.0(ts-node@10.9.1)
       '@jest/types': 29.6.3
       import-local: 3.1.0
-      jest-cli: 29.7.0(@types/node@20.4.7)(ts-node@10.9.1)
+      jest-cli: 29.7.0(@types/node@20.5.1)(ts-node@10.9.1)
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -9849,7 +9849,7 @@ packages:
       dnd-core: 15.1.2
     dev: false
 
-  /react-dnd@15.1.2(@types/node@20.4.7)(react@18.2.0):
+  /react-dnd@15.1.2(@types/node@20.5.1)(react@18.2.0):
     resolution: {integrity: sha512-EaSbMD9iFJDY/o48T3c8wn3uWU+2uxfFojhesZN3LhigJoAIvH2iOjxofSA9KbqhAKP6V9P853G6XG8JngKVtA==}
     peerDependencies:
       '@types/hoist-non-react-statics': '>= 3.3.1'
@@ -9866,7 +9866,7 @@ packages:
     dependencies:
       '@react-dnd/invariant': 3.0.1
       '@react-dnd/shallowequal': 3.0.1
-      '@types/node': 20.4.7
+      '@types/node': 20.5.1
       dnd-core: 15.1.2
       fast-deep-equal: 3.1.3
       hoist-non-react-statics: 3.3.2
@@ -11040,7 +11040,7 @@ packages:
     peerDependencies:
       '@strapi/strapi': ^4.0.0
     dependencies:
-      '@strapi/strapi': 4.14.0(@babel/core@7.22.20)(@babel/runtime@7.22.15)(@codemirror/autocomplete@6.9.1)(@codemirror/language@6.9.1)(@codemirror/lint@6.4.2)(@codemirror/search@6.5.4)(@codemirror/state@6.2.1)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.20.1)(@types/node@20.4.7)(codemirror@6.0.1)(jest@29.7.0)(pg@8.11.3)(react-dom@18.2.0)(react-router-dom@5.3.4)(react@18.2.0)(redux@4.2.1)(styled-components@5.3.3)
+      '@strapi/strapi': 4.14.0(@babel/core@7.22.20)(@babel/runtime@7.22.15)(@codemirror/autocomplete@6.9.1)(@codemirror/language@6.9.1)(@codemirror/lint@6.4.2)(@codemirror/search@6.5.4)(@codemirror/state@6.2.1)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.20.1)(@types/node@20.5.1)(codemirror@6.0.1)(jest@29.7.0)(pg@8.11.3)(react-dom@18.2.0)(react-router-dom@5.3.4)(react@18.2.0)(redux@4.2.1)(styled-components@5.3.3)
       chalk: 4.1.2
       cli-table: 0.3.11
       commander: 8.3.0
@@ -11452,7 +11452,7 @@ packages:
     engines: {node: '>= 14.0.0'}
     dev: false
 
-  /ts-node@10.9.1(@types/node@20.4.7)(typescript@5.2.2):
+  /ts-node@10.9.1(@types/node@20.5.1)(typescript@5.2.2):
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
     peerDependencies:
@@ -11471,7 +11471,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 20.4.7
+      '@types/node': 20.5.1
       acorn: 8.10.0
       acorn-walk: 8.2.0
       arg: 4.1.3
@@ -11777,7 +11777,7 @@ packages:
     engines: {node: '>= 0.8'}
     dev: false
 
-  /vite@4.4.9(@types/node@20.4.7):
+  /vite@4.4.9(@types/node@20.5.1):
     resolution: {integrity: sha512-2mbUn2LlUmNASWwSCNSJ/EG2HuSRTnVNaydp6vMCm5VIqJsjMfbIWtbH2kDuwUVW5mMUKKZvGPX/rqeqVvv1XA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -11805,7 +11805,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.4.7
+      '@types/node': 20.5.1
       esbuild: 0.18.20
       postcss: 8.4.30
       rollup: 3.29.3
@@ -12256,6 +12256,6 @@ packages:
       jest: ^29.6.x
       typescript: ^5.1.x
     dependencies:
-      jest: 29.7.0(@types/node@20.4.7)(ts-node@10.9.1)
+      jest: 29.7.0(@types/node@20.5.1)(ts-node@10.9.1)
       typescript: 5.2.2
     dev: false
