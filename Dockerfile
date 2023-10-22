@@ -1,20 +1,46 @@
 FROM node:20.8.1-alpine@sha256:002b6ee25b63b81dc4e47c9378ffe20915c3fa0e98e834c46584438468b1d0b5 AS development
 
-ENV CI=true
-
 RUN corepack enable
 
 COPY ./docker/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 WORKDIR /srv/app
 
-VOLUME /srv/.pnpm-store
 VOLUME /srv/app
 
+ENTRYPOINT ["docker-entrypoint.sh"]
+CMD ["yarn", "run", "develop"]
 EXPOSE 1337
 
-ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["pnpm", "run", "develop"]
+
+################################################################################
+# Prepare
+
+FROM node:20.8.1-alpine@sha256:002b6ee25b63b81dc4e47c9378ffe20915c3fa0e98e834c46584438468b1d0b5 AS prepare
+
+RUN corepack enable
+
+WORKDIR /srv/app/
+
+COPY ./package.json ./yarn.lock ./
+
+RUN yarn install --frozen-lockfile
+
+COPY ./ ./
+
+
+################################################################################
+# Lint
+
+FROM node:20.8.1-alpine@sha256:002b6ee25b63b81dc4e47c9378ffe20915c3fa0e98e834c46584438468b1d0b5 AS lint
+
+RUN corepack enable
+
+WORKDIR /srv/app/
+
+COPY --from=prepare /srv/app ./
+
+RUN yarn run lint
 
 
 ################################################################################
@@ -22,33 +48,21 @@ CMD ["pnpm", "run", "develop"]
 
 FROM node:20.8.1-alpine@sha256:002b6ee25b63b81dc4e47c9378ffe20915c3fa0e98e834c46584438468b1d0b5 AS build
 
-# The `CI` environment variable must be set for pnpm to run in headless mode
-ENV CI=true
-
-# Installing libvips-dev for sharp Compatability
-RUN apk update && apk add build-base gcc autoconf automake zlib-dev libpng-dev nasm bash vips-dev \
-  && rm -rf /var/cache/apk/* > /dev/null 2>&1 \
-  && corepack enable
+RUN corepack enable
 
 WORKDIR /srv/app/
 
-COPY ./pnpm-lock.yaml ./
+COPY --from=prepare /srv/app ./
 
-RUN corepack enable && \
-    pnpm fetch
-
-COPY ./ ./
-
-RUN pnpm install --offline \
-  && pnpm build
+RUN yarn run build
 
 ENV NODE_ENV=production
 
-RUN pnpm install --offline
+RUN yarn install
 
 
 ################################################################################
-FROM node:20.8.1-alpine@sha256:002b6ee25b63b81dc4e47c9378ffe20915c3fa0e98e834c46584438468b1d0b5
+FROM node:20.8.1-alpine@sha256:002b6ee25b63b81dc4e47c9378ffe20915c3fa0e98e834c46584438468b1d0b5 AS production
 
 RUN apk add vips-dev \
   && rm -rf /var/cache/apk/* \
@@ -60,8 +74,9 @@ ENV PATH /srv/node_modules/.bin:$PATH
 
 WORKDIR /srv/app
 
+COPY --from=lint /srv/app/package.json /tmp/package.json
 COPY --from=build /srv/app ./
 
 EXPOSE 1337
 
-CMD ["pnpm", "start"]
+CMD ["yarn", "run", "start"]
