@@ -2,4 +2,4 @@
 # shellcheck source=./_/husky.sh
 . "$(dirname "$(readlink -f "$0")")/_/husky.sh"
 
-pnpm commitlint --config .commitlintrc.cjs --edit "$1"
+yarn commitlint --config .commitlintrc.cjs --edit "$1"

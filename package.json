@@ -4,10 +4,13 @@
   "version": "2.6.2",
   "description": "Headless API CMS for cReal's website.",
   "author": "Jonas Thelemann <e-mail+dargmuesli/creal_strapi@jonas-thelemann.de>",
-  "packageManager": "pnpm@8.9.2",
+  "packageManager": "yarn@1.22.19",
   "scripts": {
     "build": "strapi build",
     "develop": "strapi develop",
+    "lint": "yarn run lint:es && yarn run lint:ts",
+    "lint:es": "eslint --cache --ext .js,.ts --ignore-path .gitignore .",
+    "lint:ts": "tsc --noEmit",
     "prepare": "node -e \"try { require('husky').install() } catch (e) {if (e.code !== 'MODULE_NOT_FOUND') throw e}\"",
     "start": "strapi start",
     "strapi": "strapi"
@@ -15,21 +18,44 @@
   "devDependencies": {
     "@commitlint/cli": "18.0.0",
     "@commitlint/config-conventional": "18.0.0",
+    "@typescript-eslint/eslint-plugin": "6.8.0",
+    "@typescript-eslint/parser": "6.8.0",
+    "eslint": "8.52.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-plugin-prettier": "5.0.1",
     "husky": "8.0.3",
-    "path-to-regexp": "1.8.0"
+    "prettier": "3.0.3"
   },
   "dependencies": {
-    "@strapi/plugin-i18n": "4.14.5",
-    "@strapi/plugin-users-permissions": "4.14.5",
-    "@strapi/strapi": "4.14.5",
-    "pg": "8.11.3",
-    "strapi-plugin-config-sync": "1.2.1"
+    "@babel/core": "^7.23.2",
+    "@babel/runtime": "^7.23.2",
+    "@codemirror/autocomplete": "^6.10.2",
+    "@codemirror/language": "^6.9.1",
+    "@codemirror/lint": "^6.4.2",
+    "@codemirror/search": "^6.5.4",
+    "@codemirror/state": "^6.3.1",
+    "@codemirror/theme-one-dark": "^6.1.2",
+    "@codemirror/view": "^6.21.3",
+    "@lezer/common": "^1.1.0",
+    "@strapi/plugin-i18n": "^4.14.5",
+    "@strapi/plugin-users-permissions": "^4.14.5",
+    "@strapi/strapi": "^4.14.5",
+    "codemirror": "^6.0.1",
+    "pg": "^8.11.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-is": "^18.2.0",
+    "react-router-dom": "^5.3.4",
+    "redux": "^4.2.1",
+    "strapi-plugin-config-sync": "^1.2.1",
+    "styled-components": "5.3.3"
   },
   "strapi": {
     "uuid": "6cce022b-3a19-4edf-9549-fac432b13db0"
   },
   "engines": {
-    "node": "20"
+    "node": ">=16.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
   },
   "license": "MIT"
 }
