@@ -39,8 +39,6 @@ jobs:
     name: Build
     uses: dargmuesli/github-actions/.github/workflows/docker.yml@1.2.0
     needs: release_semantic_dry
-    permissions:
-      packages: write
     with:
       TAG: ${{ needs.release_semantic_dry.outputs.new_release_version }}
   release_semantic:
@@ -51,3 +49,6 @@ jobs:
       contents: write
     secrets:
       PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+    with:
+      CACHE_PATH: yarn.lock
+      PACKAGE_MANAGER: yarn
