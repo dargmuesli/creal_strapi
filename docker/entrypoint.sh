@@ -3,6 +3,7 @@ set -e
 
 if [ "$NODE_ENV" != "production" ]; then
     yarn install
+    yarn rebuild
 fi
 
 exec "$@"
