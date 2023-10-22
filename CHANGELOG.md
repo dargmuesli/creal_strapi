@@ -1,3 +1,15 @@
+## [2.7.0](https://github.com/dargmuesli/creal_strapi/compare/2.6.2...2.7.0) (2023-10-22)
+
+
+### Features
+
+* migrate to yarn ([d00e11c](https://github.com/dargmuesli/creal_strapi/commit/d00e11ceacd9dcf4b7f78482cc5e5e14e9ffb57f))
+
+
+### Bug Fixes
+
+* correct development ([cf650d2](https://github.com/dargmuesli/creal_strapi/commit/cf650d2ae3cdcd14c841cee41a26fcba4d2a5002))
+
 ## [2.6.2](https://github.com/dargmuesli/creal_strapi/compare/2.6.1...2.6.2) (2023-10-20)
 
 
