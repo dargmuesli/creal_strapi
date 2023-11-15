@@ -4,11 +4,11 @@
   "version": "2.7.3",
   "description": "Headless API CMS for cReal's website.",
   "author": "Jonas Thelemann <e-mail+dargmuesli/creal_strapi@jonas-thelemann.de>",
-  "packageManager": "yarn@4.0.2",
+  "packageManager": "pnpm@8.10.5",
   "scripts": {
     "build": "strapi build",
     "develop": "strapi develop",
-    "lint": "yarn run lint:es && yarn run lint:ts",
+    "lint": "pnpm run lint:es && pnpm run lint:ts",
     "lint:es": "eslint --cache --ext .js,.ts --ignore-path .gitignore .",
     "lint:ts": "tsc --noEmit",
     "prepare": "node -e \"try { require('husky').install() } catch (e) {if (e.code !== 'MODULE_NOT_FOUND') throw e}\"",
@@ -18,6 +18,7 @@
   "devDependencies": {
     "@commitlint/cli": "18.4.1",
     "@commitlint/config-conventional": "18.4.0",
+    "@strapi/typescript-utils": "4.15.4",
     "@typescript-eslint/eslint-plugin": "6.11.0",
     "@typescript-eslint/parser": "6.11.0",
     "eslint": "8.53.0",
