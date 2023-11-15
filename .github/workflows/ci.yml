@@ -32,9 +32,7 @@ jobs:
     secrets:
       PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
     with:
-      CACHE_PATH: yarn.lock
       DRY_RUN: true
-      PACKAGE_MANAGER: yarn
   build:
     name: Build
     uses: dargmuesli/github-actions/.github/workflows/docker.yml@1.5.0
@@ -51,6 +49,3 @@ jobs:
       contents: write
     secrets:
       PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-    with:
-      CACHE_PATH: yarn.lock
-      PACKAGE_MANAGER: yarn

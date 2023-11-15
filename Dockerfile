@@ -1,92 +1,75 @@
-FROM node:20.9.0-alpine@sha256:8e015de364a2eb2ed7c52a558e9f716dcb615560ffd132234087c10ccc1f2c63 AS development
+#############
+# Create base image.
 
+FROM node:20.9.0-alpine AS base-image
+
+# The `CI` environment variable must be set for pnpm to run in headless mode
 ENV CI=true
+
+WORKDIR /srv/app/
 
 RUN corepack enable
 
+
+#############
+# Serve Strapi in development mode.
+
+FROM base-image AS development
+
 COPY ./docker/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
-WORKDIR /srv/app
-
+VOLUME /srv/.pnpm-store
 VOLUME /srv/app
 
 ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["yarn", "run", "develop"]
+CMD ["pnpm", "run", "develop"]
 EXPOSE 1337
 
 
 ################################################################################
 # Prepare
 
-FROM node:20.9.0-alpine@sha256:8e015de364a2eb2ed7c52a558e9f716dcb615560ffd132234087c10ccc1f2c63 AS prepare
+FROM base-image AS prepare
 
-ENV CI=true
+COPY ./pnpm-lock.yaml ./
 
-RUN corepack enable
-
-WORKDIR /srv/app/
-
-COPY ./.yarnrc.yml ./package.json ./yarn.lock ./
-
-RUN yarn install --frozen-lockfile
+RUN pnpm fetch
 
 COPY ./ ./
 
+RUN pnpm install --offline
 
 ################################################################################
 # Lint
 
-FROM node:20.9.0-alpine@sha256:8e015de364a2eb2ed7c52a558e9f716dcb615560ffd132234087c10ccc1f2c63 AS lint
+FROM prepare AS lint
 
-ENV CI=true
-
-RUN corepack enable
-
-WORKDIR /srv/app/
-
-COPY --from=prepare /srv/app ./
-
-RUN yarn run lint
+RUN pnpm run lint
 
 
 ################################################################################
 # Build
 
-FROM node:20.9.0-alpine@sha256:8e015de364a2eb2ed7c52a558e9f716dcb615560ffd132234087c10ccc1f2c63 AS build
+FROM prepare AS build
 
-ENV CI=true
-
-RUN corepack enable
-
-WORKDIR /srv/app/
-
-COPY --from=prepare /srv/app ./
-
-RUN yarn run build
+RUN pnpm run build
 
 ENV NODE_ENV=production
 
-RUN yarn install
+RUN pnpm install
 
 
 ################################################################################
-FROM node:20.9.0-alpine@sha256:8e015de364a2eb2ed7c52a558e9f716dcb615560ffd132234087c10ccc1f2c63 AS production
+FROM build AS production
 
-ENV CI=true
-
-RUN apk add vips-dev \
-  && rm -rf /var/cache/apk/* \
-  && corepack enable
+RUN apk add --no-cache vips-dev=8.14.3-r0
 
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
 ENV PATH /srv/node_modules/.bin:$PATH
 
-WORKDIR /srv/app
-
 COPY --from=lint /srv/app/package.json /tmp/package.json
-COPY --from=build /srv/app ./
 
 EXPOSE 1337
 
-CMD ["yarn", "run", "start"]
+CMD ["pnpm", "run", "start"]
