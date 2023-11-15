@@ -1,3 +1,10 @@
+## [2.8.0](https://github.com/dargmuesli/creal_strapi/compare/2.7.3...2.8.0) (2023-11-15)
+
+
+### Features
+
+* migrate to pnpm ([048c615](https://github.com/dargmuesli/creal_strapi/commit/048c615836833acc5e3456792c28c9156abedfcd))
+
 ## [2.7.3](https://github.com/dargmuesli/creal_strapi/compare/2.7.2...2.7.3) (2023-11-03)
 
 
