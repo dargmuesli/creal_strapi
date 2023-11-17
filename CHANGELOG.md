@@ -1,3 +1,10 @@
+## [2.8.1](https://github.com/dargmuesli/creal_strapi/compare/2.8.0...2.8.1) (2023-11-17)
+
+
+### Bug Fixes
+
+* **deps:** use @strapi/typescript-utils as normal dependency ([ebd8a04](https://github.com/dargmuesli/creal_strapi/commit/ebd8a0428f2efb83b6fe117e95d3d293a9fd7bbe))
+
 ## [2.8.0](https://github.com/dargmuesli/creal_strapi/compare/2.7.3...2.8.0) (2023-11-15)
 
 
