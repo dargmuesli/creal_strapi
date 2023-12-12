@@ -62,7 +62,7 @@ RUN pnpm install
 ################################################################################
 FROM build AS production
 
-RUN apk add --no-cache vips-dev=8.14.3-r0
+RUN apk add --no-cache vips-dev
 
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
