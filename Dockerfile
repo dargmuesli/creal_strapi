@@ -52,11 +52,10 @@ RUN pnpm run lint
 
 FROM prepare AS build
 
-RUN pnpm run build
-
 ENV NODE_ENV=production
 
-RUN pnpm install
+RUN pnpm run build \
+  && pnpm install --ignore-scripts
 
 
 ################################################################################
