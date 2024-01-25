@@ -11,7 +11,7 @@
     "lint": "pnpm run lint:es && pnpm run lint:ts",
     "lint:es": "eslint --cache --ext .js,.ts --ignore-path .gitignore .",
     "lint:ts": "tsc --noEmit",
-    "prepare": "node -e \"try { require('husky').install() } catch (e) {if (e.code !== 'MODULE_NOT_FOUND') throw e}\"",
+    "prepare": "husky",
     "start": "strapi start",
     "strapi": "strapi"
   },
