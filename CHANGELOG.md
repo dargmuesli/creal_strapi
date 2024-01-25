@@ -1,3 +1,10 @@
+## [2.8.7](https://github.com/dargmuesli/creal_strapi/compare/2.8.6...2.8.7) (2024-01-25)
+
+
+### Bug Fixes
+
+* **docker:** install on production without scripts ([6773901](https://github.com/dargmuesli/creal_strapi/commit/677390135485708f806e10f996219493f46e7663))
+
 ## [2.8.6](https://github.com/dargmuesli/creal_strapi/compare/2.8.5...2.8.6) (2024-01-19)
 
 
