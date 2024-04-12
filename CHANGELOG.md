@@ -1,3 +1,10 @@
+## [2.8.13](https://github.com/dargmuesli/creal_strapi/compare/2.8.12...2.8.13) (2024-04-12)
+
+
+### Bug Fixes
+
+* schedule release ([7e8c9c6](https://github.com/dargmuesli/creal_strapi/commit/7e8c9c69bebce39ca098e968e2bcdca5f8e9edcc))
+
 ## [2.8.12](https://github.com/dargmuesli/creal_strapi/compare/2.8.11...2.8.12) (2024-03-29)
 
 
