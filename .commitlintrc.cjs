@@ -1,4 +1,4 @@
-const commitlintConfigConventional = require('@commitlint/config-conventional')
+const commitlintConfigConventional = require('@commitlint/config-conventional') // eslint-disable-line @typescript-eslint/no-var-requires
 
 const ruleMaxLineLength =
   commitlintConfigConventional.rules['body-max-line-length']

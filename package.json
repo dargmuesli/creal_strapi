@@ -1,32 +1,5 @@
 {
-  "name": "creal_strapi",
-  "private": true,
-  "version": "2.8.13",
-  "description": "Headless API CMS for cReal's website.",
   "author": "Jonas Thelemann <e-mail+dargmuesli/creal_strapi@jonas-thelemann.de>",
-  "packageManager": "pnpm@9.0.1",
-  "scripts": {
-    "build": "strapi build",
-    "develop": "strapi develop",
-    "lint": "pnpm run lint:es && pnpm run lint:ts",
-    "lint:es": "eslint --cache --ext .js,.ts --ignore-path .gitignore .",
-    "lint:ts": "tsc --noEmit",
-    "prepare": "husky",
-    "start": "strapi start",
-    "strapi": "strapi"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "18.6.1",
-    "@commitlint/config-conventional": "18.6.3",
-    "@typescript-eslint/eslint-plugin": "7.7.0",
-    "@typescript-eslint/parser": "7.7.0",
-    "eslint": "8.57.0",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-prettier": "5.1.3",
-    "husky": "9.0.11",
-    "prettier": "3.2.5",
-    "typescript": "5.4.5"
-  },
   "dependencies": {
     "@babel/core": "^7.23.9",
     "@babel/runtime": "^7.23.9",
@@ -51,12 +24,40 @@
     "strapi-plugin-config-sync": "^1.2.3",
     "styled-components": "5.3.11"
   },
-  "strapi": {
-    "uuid": "6cce022b-3a19-4edf-9549-fac432b13db0"
+  "description": "Headless API CMS for cReal's website.",
+  "devDependencies": {
+    "@commitlint/cli": "18.6.1",
+    "@commitlint/config-conventional": "18.6.3",
+    "@eslint/js": "9.0.0",
+    "eslint": "9.0.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-prettier": "5.1.3",
+    "globals": "15.0.0",
+    "husky": "9.0.11",
+    "prettier": "3.2.5",
+    "typescript": "5.4.5",
+    "typescript-eslint": "7.7.0"
   },
   "engines": {
     "node": ">=16.0.0 <=20.x.x",
     "npm": ">=6.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "name": "creal_strapi",
+  "packageManager": "pnpm@9.0.1",
+  "private": true,
+  "scripts": {
+    "build": "strapi build",
+    "develop": "strapi develop",
+    "lint": "pnpm run lint:es && pnpm run lint:ts",
+    "lint:es": "eslint --cache",
+    "lint:ts": "tsc --noEmit",
+    "prepare": "husky",
+    "start": "strapi start",
+    "strapi": "strapi"
+  },
+  "strapi": {
+    "uuid": "6cce022b-3a19-4edf-9549-fac432b13db0"
+  },
+  "version": "2.8.13"
 }
