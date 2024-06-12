@@ -49,7 +49,7 @@ importers:
         version: 4.24.5(@babel/runtime@7.24.7)(@codemirror/autocomplete@6.16.2(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.0)(@lezer/common@1.2.1))(@codemirror/language@6.10.2)(@codemirror/lint@6.8.0)(@codemirror/search@6.5.6)(@codemirror/state@6.4.1)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.28.0)(@swc/helpers@0.5.11)(@types/hoist-non-react-statics@3.3.5)(@types/node@20.14.2)(@types/react@18.3.3)(codemirror@6.0.1(@lezer/common@1.2.1))(pg@8.12.0)(react-dom@18.3.1(react@18.3.1))(react-router-dom@5.3.4(react@18.3.1))(react@18.3.1)(redux@4.2.1)(styled-components@5.3.11(@babel/core@7.24.7)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1))(terser@5.31.1)(type-fest@2.19.0)
       '@strapi/typescript-utils':
         specifier: ^4.20.0
-        version: 4.24.5
+        version: 4.25.0
       codemirror:
         specifier: ^6.0.1
         version: 6.0.1(@lezer/common@1.2.1)
@@ -1508,6 +1508,10 @@ packages:
 
   '@strapi/typescript-utils@4.24.5':
     resolution: {integrity: sha512-xI+5CuRtJjlEaUmeZE+tXP1lX7UfN3XbFHxG7D5zLP7gB2HSG7ai2d0V7XXqbrN7QDVXn8zkFVzZypCDnyTU4g==}
+    engines: {node: '>=18.0.0 <=20.x.x', npm: '>=6.0.0'}
+
+  '@strapi/typescript-utils@4.25.0':
+    resolution: {integrity: sha512-5PrGGDIcpIUpgTFi9/d7mIBk+2aJQ1sqrOeQetUs6IU9jEa9qfyhCQ+xXWHlqea/RUKe9/8uv1HEkm+cDsbzXQ==}
     engines: {node: '>=18.0.0 <=20.x.x', npm: '>=6.0.0'}
 
   '@strapi/ui-primitives@1.19.0':
@@ -8359,6 +8363,15 @@ snapshots:
       - tedious
 
   '@strapi/typescript-utils@4.24.5':
+    dependencies:
+      chalk: 4.1.2
+      cli-table3: 0.6.2
+      fs-extra: 10.0.0
+      lodash: 4.17.21
+      prettier: 2.8.4
+      typescript: 5.2.2
+
+  '@strapi/typescript-utils@4.25.0':
     dependencies:
       chalk: 4.1.2
       cli-table3: 0.6.2
