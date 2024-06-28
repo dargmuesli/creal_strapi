@@ -1,3 +1,9 @@
+## [2.8.21](https://github.com/dargmuesli/creal_strapi/compare/2.8.20...2.8.21) (2024-06-28)
+
+### Bug Fixes
+
+* **security:** correct cross origin resource policy ([50d25a7](https://github.com/dargmuesli/creal_strapi/commit/50d25a717fdcad30981c6b0f8759ce4c91ef3055))
+
 ## [2.8.20](https://github.com/dargmuesli/creal_strapi/compare/2.8.19...2.8.20) (2024-06-28)
 
 ### Bug Fixes
