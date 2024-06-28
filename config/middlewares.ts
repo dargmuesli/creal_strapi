@@ -1,6 +1,11 @@
 export default [
   'strapi::errors',
-  'strapi::security',
+  {
+    name: 'strapi::security',
+    config: {
+      crossOriginResourcePolicy: true,
+    },
+  },
   'strapi::cors',
   'strapi::poweredBy',
   'strapi::logger',
