@@ -3,7 +3,7 @@ export default [
   {
     name: 'strapi::security',
     config: {
-      crossOriginResourcePolicy: true,
+      crossOriginResourcePolicy: { policy: 'same-site' },
     },
   },
   'strapi::cors',
