@@ -1,3 +1,14 @@
+## [2.9.0](https://github.com/dargmuesli/creal_strapi/compare/2.8.21...2.9.0) (2024-07-03)
+
+### Features
+
+* **content-type:** add testimonial ([ca2e922](https://github.com/dargmuesli/creal_strapi/commit/ca2e922ea89fe5843589a597f2947356358c0b25))
+
+### Bug Fixes
+
+* **git:** correct ignores ([1ec5bc9](https://github.com/dargmuesli/creal_strapi/commit/1ec5bc92e2eb79510e4a5aa88447496e376e7b89))
+* **middlewares:** correct order ([6119bf3](https://github.com/dargmuesli/creal_strapi/commit/6119bf33d3804abb58c893b6fe7ba400474bd44b))
+
 ## [2.8.21](https://github.com/dargmuesli/creal_strapi/compare/2.8.20...2.8.21) (2024-06-28)
 
 ### Bug Fixes
