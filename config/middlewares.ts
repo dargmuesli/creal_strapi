@@ -4,7 +4,13 @@ export default [
   {
     name: 'strapi::security',
     config: {
-      crossOriginResourcePolicy: { policy: 'same-site' },
+      ...(process.env.NODE_ENV === 'production'
+        ? {
+            crossOriginResourcePolicy: {
+              policy: 'same-site',
+            },
+          }
+        : undefined),
     },
   },
   'strapi::cors',
