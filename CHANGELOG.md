@@ -1,3 +1,13 @@
+## [3.0.0](https://github.com/dargmuesli/creal_strapi/compare/2.9.6...3.0.0) (2024-09-19)
+
+### ⚠ BREAKING CHANGES
+
+* migrate to v5
+
+### Code Refactoring
+
+* migrate to v5 ([72ef824](https://github.com/dargmuesli/creal_strapi/commit/72ef824399c2d9c2836c4b93a678e25b92acb692))
+
 ## [2.9.6](https://github.com/dargmuesli/creal_strapi/compare/2.9.5...2.9.6) (2024-09-13)
 
 ### Bug Fixes
