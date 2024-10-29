@@ -65,7 +65,7 @@ RUN apk add --no-cache vips-dev
 
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
-ENV PATH /srv/node_modules/.bin:$PATH
+ENV PATH=/srv/node_modules/.bin:$PATH
 
 COPY --from=lint /srv/app/package.json /tmp/package.json
 

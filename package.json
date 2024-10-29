@@ -24,8 +24,8 @@
   },
   "description": "Headless API CMS for cReal's website.",
   "devDependencies": {
-    "@commitlint/cli": "18.6.1",
-    "@commitlint/config-conventional": "18.6.3",
+    "@commitlint/cli": "19.5.0",
+    "@commitlint/config-conventional": "19.5.0",
     "@eslint/js": "9.13.0",
     "eslint": "9.13.0",
     "eslint-config-prettier": "9.1.0",
@@ -44,7 +44,7 @@
   "packageManager": "pnpm@9.12.3",
   "private": true,
   "scripts": {
-    "build": "strapi build",
+    "build": "mkdir dist && echo '{\"type\":\"commonjs\"}' > ./dist/package.json && strapi build",
     "develop": "strapi develop",
     "lint": "pnpm run lint:es && pnpm run lint:ts",
     "lint:es": "eslint --cache",
@@ -56,5 +56,6 @@
   "strapi": {
     "uuid": "6cce022b-3a19-4edf-9549-fac432b13db0"
   },
+  "type": "module",
   "version": "3.0.2"
 }
