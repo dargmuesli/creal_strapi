@@ -30,7 +30,7 @@ export default ({ env }) => ({
     },
     pool: {
       max: env.int('DATABASE_POOL_MAX', 10),
-      min: env.int('DATABASE_POOL_MIN', 2),
+      min: env.int('DATABASE_POOL_MIN', 0), // not 2 as per default to prevent a 401 error (https://stackoverflow.com/a/76020890/4682621)
     },
   },
 })
