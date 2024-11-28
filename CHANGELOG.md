@@ -1,3 +1,9 @@
+## [3.0.5](https://github.com/dargmuesli/creal_strapi/compare/3.0.4...3.0.5) (2024-11-28)
+
+### Bug Fixes
+
+* **database:** persist connection ([c5ddb10](https://github.com/dargmuesli/creal_strapi/commit/c5ddb103fa69b9b4cb601dfcd9f881ed82efd169))
+
 ## [3.0.4](https://github.com/dargmuesli/creal_strapi/compare/3.0.3...3.0.4) (2024-11-15)
 
 ### Bug Fixes
