@@ -8,7 +8,9 @@ ENV CI=true
 
 WORKDIR /srv/app/
 
-RUN corepack enable
+RUN npm install -g corepack@latest \
+  # TODO: remove (https://github.com/nodejs/corepack/issues/612)
+  && corepack enable
 
 
 #############
@@ -31,7 +33,7 @@ EXPOSE 1337
 
 FROM base-image AS prepare
 
-COPY ./pnpm-lock.yaml ./
+COPY ./pnpm-lock.yaml package.json ./
 
 RUN pnpm fetch
 
@@ -55,7 +57,7 @@ FROM prepare AS build
 ENV NODE_ENV=production
 
 RUN pnpm run build \
-  && pnpm install --ignore-scripts
+  && pnpm install --ignore-scripts --prod
 
 
 ################################################################################

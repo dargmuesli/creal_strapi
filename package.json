@@ -7,7 +7,7 @@
     "@codemirror/language": "6.10.8",
     "@codemirror/lint": "6.8.4",
     "@codemirror/search": "6.5.8",
-    "@codemirror/state": "6.5.1",
+    "@codemirror/state": "6.5.2",
     "@codemirror/theme-one-dark": "6.1.2",
     "@codemirror/view": "6.36.2",
     "@lezer/common": "1.2.3",
@@ -24,8 +24,8 @@
   },
   "description": "Headless API CMS for cReal's website.",
   "devDependencies": {
-    "@commitlint/cli": "19.6.1",
-    "@commitlint/config-conventional": "19.6.0",
+    "@commitlint/cli": "19.7.1",
+    "@commitlint/config-conventional": "19.7.1",
     "@eslint/js": "9.19.0",
     "eslint": "9.19.0",
     "eslint-config-prettier": "10.0.1",
@@ -34,14 +34,14 @@
     "husky": "9.1.7",
     "prettier": "3.4.2",
     "typescript": "5.7.3",
-    "typescript-eslint": "8.22.0"
+    "typescript-eslint": "8.23.0"
   },
   "engines": {
     "node": ">=18.0.0 <=22.x.x"
   },
   "license": "MIT",
   "name": "creal_strapi",
-  "packageManager": "pnpm@9.15.4",
+  "packageManager": "pnpm@10.2.0",
   "private": true,
   "scripts": {
     "build": "mkdir dist && echo '{\"type\":\"commonjs\"}' > ./dist/package.json && strapi build",
