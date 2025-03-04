@@ -1,3 +1,9 @@
+## [3.0.13](https://github.com/dargmuesli/creal_strapi/compare/3.0.12...3.0.13) (2025-03-04)
+
+### Bug Fixes
+
+* **package:** allow to build `sharp` dependency ([8a433e9](https://github.com/dargmuesli/creal_strapi/commit/8a433e920602c574c1b8cc478420f7c1f3d99842))
+
 ## [3.0.12](https://github.com/dargmuesli/creal_strapi/compare/3.0.11...3.0.12) (2025-02-28)
 
 ### Bug Fixes
