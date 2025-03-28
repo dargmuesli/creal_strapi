@@ -1,3 +1,9 @@
+## [3.0.15](https://github.com/dargmuesli/creal_strapi/compare/3.0.14...3.0.15) (2025-03-28)
+
+### Bug Fixes
+
+* schedule release ([1b3e716](https://github.com/dargmuesli/creal_strapi/commit/1b3e71643f54463e63ceba121bdec793e49d13e7))
+
 ## [3.0.14](https://github.com/dargmuesli/creal_strapi/compare/3.0.13...3.0.14) (2025-03-14)
 
 ### Bug Fixes
