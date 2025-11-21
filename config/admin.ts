@@ -1,18 +1,20 @@
-import { getSecret } from './util'
-
 export default ({ env }) => ({
   apiToken: {
-    salt: getSecret({ env, name: 'API_TOKEN_SALT' }),
+    salt: env('API_TOKEN_SALT'),
   },
   auth: {
-    secret: getSecret({ env, name: 'ADMIN_JWT' }),
+    secret: env('ADMIN_JWT_SECRET'),
   },
   flags: {
-    nps: env.bool('FLAG_NPS', true),
+    nps: env.bool('FLAG_NPS', false),
+    promoteEE: env.bool('FLAG_PROMOTE_EE', false),
   },
+  // secrets: {
+  //   encryptionKey: env('ENCRYPTION_KEY'),
+  // },
   transfer: {
     token: {
-      salt: getSecret({ env, name: 'TRANSFER_TOKEN_SALT' }),
+      salt: env('TRANSFER_TOKEN_SALT'),
     },
   },
   watchIgnoreFiles: ['**/config/sync/**'],

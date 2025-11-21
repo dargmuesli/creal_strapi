@@ -1,5 +1,3 @@
-import { getSecret } from './util'
-
 export default ({ env }) => ({
   connection: {
     acquireConnectionTimeout: env.int('DATABASE_CONNECTION_TIMEOUT', 60000),
@@ -8,11 +6,7 @@ export default ({ env }) => ({
       connectionString: env('DATABASE_URL'),
       database: env('DATABASE_NAME', 'strapi'),
       host: env('DATABASE_HOST', 'postgres'),
-      password: env(
-        'DATABASE_PASSWORD',
-        getSecret({ env, name: 'POSTGRES_PASSWORD' }),
-        'utf-8',
-      ),
+      password: env('DATABASE_PASSWORD', 'strapi'),
       port: env.int('DATABASE_PORT', 5432),
       ssl: env.bool('DATABASE_SSL', false) && {
         key: env('DATABASE_SSL_KEY', undefined),
@@ -22,11 +16,7 @@ export default ({ env }) => ({
         cipher: env('DATABASE_SSL_CIPHER', undefined),
         rejectUnauthorized: env.bool('DATABASE_SSL_REJECT_UNAUTHORIZED', true),
       },
-      user: env(
-        'DATABASE_USERNAME',
-        getSecret({ env, name: 'POSTGRES_USER' }),
-        'utf-8',
-      ),
+      user: env('DATABASE_USERNAME', 'strapi'),
     },
     pool: {
       max: env.int('DATABASE_POOL_MAX', 10),
