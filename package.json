@@ -54,7 +54,7 @@
   },
   "private": true,
   "scripts": {
-    "build": "mkdir dist && echo '{\"type\":\"commonjs\"}' > ./dist/package.json && strapi build",
+    "build": "strapi build",
     "develop": "strapi develop",
     "lint": "pnpm run lint:es && pnpm run lint:ts",
     "lint:es": "eslint --cache",
@@ -66,6 +66,5 @@
   "strapi": {
     "uuid": "6cce022b-3a19-4edf-9549-fac432b13db0"
   },
-  "type": "module",
   "version": "3.0.32"
 }
