@@ -1,3 +1,13 @@
+## [4.0.0](https://github.com/dargmuesli/creal_strapi/compare/3.0.32...4.0.0) (2025-11-21)
+
+### ⚠ BREAKING CHANGES
+
+* **docker:** load secrets as environment variables
+
+### Features
+
+* **docker:** load secrets as environment variables ([d7cd2d8](https://github.com/dargmuesli/creal_strapi/commit/d7cd2d8bd8236ac42e8bc79fcdd5dfd469d3f50f))
+
 ## [3.0.32](https://github.com/dargmuesli/creal_strapi/compare/3.0.31...3.0.32) (2025-11-14)
 
 ### Bug Fixes
