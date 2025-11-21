@@ -1,8 +1,6 @@
-import { getSecret } from './util'
-
 export default ({ env }) => ({
   app: {
-    keys: getSecret({ env, name: 'APP_KEYS' })?.split(','),
+    keys: env.array('APP_KEYS'),
   },
   host: env('HOST', '0.0.0.0'),
   port: env.int('PORT', 1337),
