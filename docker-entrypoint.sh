@@ -5,8 +5,8 @@ ENVIRONMENT_VARIABLES_PATH="/run/environment-variables"
 
 is_valid_var_name() {
   case "$1" in
-    *[!a-zA-Z0-9_]*|'') return 1 ;;
-    *) return 0 ;;
+  *[!a-zA-Z0-9_]* | '') return 1 ;;
+  *) return 0 ;;
   esac
 }
 
