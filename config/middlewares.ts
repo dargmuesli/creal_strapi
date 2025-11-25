@@ -4,13 +4,10 @@ export default [
   {
     name: 'strapi::security',
     config: {
-      ...(process.env.NODE_ENV === 'production'
-        ? {
-            crossOriginResourcePolicy: {
-              policy: 'same-site',
-            },
-          }
-        : undefined),
+      crossOriginEmbedderPolicy: true,
+      crossOriginResourcePolicy: {
+        policy: 'cross-origin', // TODO: proxy uploads and set to `same-origing` / `true`
+      },
     },
   },
   'strapi::cors',
