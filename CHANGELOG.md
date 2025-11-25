@@ -1,3 +1,9 @@
+## [4.1.0](https://github.com/dargmuesli/creal_strapi/compare/4.0.0...4.1.0) (2025-11-25)
+
+### Features
+
+* **security:** tighten cross origin headers ([358bf30](https://github.com/dargmuesli/creal_strapi/commit/358bf3016a483c391af19d79f3f3b9cba8011915))
+
 ## [4.0.0](https://github.com/dargmuesli/creal_strapi/compare/3.0.32...4.0.0) (2025-11-21)
 
 ### ⚠ BREAKING CHANGES
