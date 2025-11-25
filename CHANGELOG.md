@@ -1,3 +1,9 @@
+## [4.1.1](https://github.com/dargmuesli/creal_strapi/compare/4.1.0...4.1.1) (2025-11-25)
+
+### Bug Fixes
+
+* **docker:** apply entrypoint to production ([edd8940](https://github.com/dargmuesli/creal_strapi/commit/edd8940e07301d21fc0a89b96c2a7875f2ef007b))
+
 ## [4.1.0](https://github.com/dargmuesli/creal_strapi/compare/4.0.0...4.1.0) (2025-11-25)
 
 ### Features
