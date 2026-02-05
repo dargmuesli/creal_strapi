@@ -1,3 +1,5 @@
+# syntax=docker/dockerfile:1
+
 #############
 # Create base image.
 
@@ -41,7 +43,7 @@ EXPOSE 1337
 
 FROM base-image AS prepare
 
-COPY ./pnpm-lock.yaml package.json ./
+COPY ./pnpm-lock.yaml ./package.json ./
 
 RUN pnpm fetch
 
