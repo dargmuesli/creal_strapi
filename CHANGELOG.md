@@ -1,3 +1,9 @@
+## [4.2.0](https://github.com/dargmuesli/creal_strapi/compare/4.1.6...4.2.0) (2026-02-09)
+
+### Features
+
+* **docker:** set user `node` ([ca790d1](https://github.com/dargmuesli/creal_strapi/commit/ca790d11cd29a1739dc9317cb0f7a9d5e820e961))
+
 ## [4.1.6](https://github.com/dargmuesli/creal_strapi/compare/4.1.5...4.1.6) (2026-01-30)
 
 ### Bug Fixes
