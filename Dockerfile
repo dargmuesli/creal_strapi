@@ -79,7 +79,9 @@ ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
 ENV PATH=/srv/node_modules/.bin:$PATH
 
-COPY --from=lint /srv/app/package.json /tmp/package.json
+COPY --from=lint /srv/app/package.json /dev/null
+
+USER node
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["pnpm", "run", "start"]
