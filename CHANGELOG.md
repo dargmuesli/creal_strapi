@@ -1,3 +1,9 @@
+## [4.2.3](https://github.com/dargmuesli/creal_strapi/compare/4.2.2...4.2.3) (2026-03-20)
+
+### Bug Fixes
+
+* schedule release ([7d88687](https://github.com/dargmuesli/creal_strapi/commit/7d886875a5b09a87860adb09b61133b520d15309))
+
 ## [4.2.2](https://github.com/dargmuesli/creal_strapi/compare/4.2.1...4.2.2) (2026-03-06)
 
 ### Bug Fixes
