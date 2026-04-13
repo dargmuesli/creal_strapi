@@ -86,7 +86,7 @@ importers:
         version: 10.1.8(eslint@10.2.0(jiti@2.6.1))
       eslint-plugin-prettier:
         specifier: 5.5.5
-        version: 5.5.5(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@10.2.0(jiti@2.6.1)))(eslint@10.2.0(jiti@2.6.1))(prettier@3.8.1)
+        version: 5.5.5(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@10.2.0(jiti@2.6.1)))(eslint@10.2.0(jiti@2.6.1))(prettier@3.8.2)
       globals:
         specifier: 17.4.0
         version: 17.4.0
@@ -94,8 +94,8 @@ importers:
         specifier: 9.1.7
         version: 9.1.7
       prettier:
-        specifier: 3.8.1
-        version: 3.8.1
+        specifier: 3.8.2
+        version: 3.8.2
       typescript:
         specifier: 6.0.2
         version: 6.0.2
@@ -5529,8 +5529,8 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
-  prettier@3.8.1:
-    resolution: {integrity: sha512-UOnG6LftzbdaHZcKoPFtOcCKztrQ57WkHDeRD9t/PTQtmT0NHSeWWepj6pS0z/N7+08BHFDQVUrfmfMRcZwbMg==}
+  prettier@3.8.2:
+    resolution: {integrity: sha512-8c3mgTe0ASwWAJK+78dpviD+A8EqhndQPUBpNUIPt6+xWlIigCwfN01lWr9MAede4uqXGTEKeQWTvzb3vjia0Q==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -8755,7 +8755,7 @@ snapshots:
       '@strapi/design-system': 2.2.0(@babel/runtime@7.29.2)(@codemirror/autocomplete@6.20.1)(@codemirror/language@6.12.3)(@codemirror/lint@6.9.5)(@codemirror/search@6.6.0)(@codemirror/state@6.6.0)(@codemirror/theme-one-dark@6.1.3)(@codemirror/view@6.41.0)(@strapi/icons@2.2.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@6.4.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(@types/react@18.3.28)(codemirror@6.0.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@6.4.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       '@strapi/icons': 2.2.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@6.4.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       '@strapi/permissions': 5.42.0
-      '@strapi/types': 5.42.0(@types/node@25.6.0)(pg@8.20.0)(typescript@5.4.4)
+      '@strapi/types': 5.42.0(@types/node@25.6.0)(pg@8.20.0)(typescript@6.0.2)
       '@strapi/typescript-utils': 5.42.0
       '@strapi/utils': 5.42.0
       '@testing-library/dom': 10.4.1
@@ -8954,7 +8954,7 @@ snapshots:
       '@strapi/database': 5.42.0(@types/node@25.6.0)(pg@8.20.0)
       '@strapi/design-system': 2.2.0(@babel/runtime@7.29.2)(@codemirror/autocomplete@6.20.1)(@codemirror/language@6.12.3)(@codemirror/lint@6.9.5)(@codemirror/search@6.6.0)(@codemirror/state@6.6.0)(@codemirror/theme-one-dark@6.1.3)(@codemirror/view@6.41.0)(@strapi/icons@2.2.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@6.4.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(@types/react@18.3.28)(codemirror@6.0.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@6.4.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       '@strapi/icons': 2.2.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@6.4.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
-      '@strapi/types': 5.42.0(@types/node@25.6.0)(pg@8.20.0)(typescript@5.4.4)
+      '@strapi/types': 5.42.0(@types/node@25.6.0)(pg@8.20.0)(typescript@6.0.2)
       '@strapi/utils': 5.42.0
       date-fns: 2.30.0
       date-fns-tz: 2.0.1(date-fns@2.30.0)
@@ -9055,7 +9055,7 @@ snapshots:
       '@strapi/generators': 5.42.0(@types/node@25.6.0)
       '@strapi/logger': 5.42.0
       '@strapi/permissions': 5.42.0
-      '@strapi/types': 5.42.0(@types/node@25.6.0)(pg@8.20.0)(typescript@5.4.4)
+      '@strapi/types': 5.42.0(@types/node@25.6.0)(pg@8.20.0)(typescript@6.0.2)
       '@strapi/typescript-utils': 5.42.0
       '@strapi/utils': 5.42.0
       '@vercel/stega': 0.1.2
@@ -9140,7 +9140,7 @@ snapshots:
   '@strapi/data-transfer@5.42.0(@types/node@25.6.0)(pg@8.20.0)(typescript@6.0.2)':
     dependencies:
       '@strapi/logger': 5.42.0
-      '@strapi/types': 5.42.0(@types/node@25.6.0)(pg@8.20.0)(typescript@5.4.4)
+      '@strapi/types': 5.42.0(@types/node@25.6.0)(pg@8.20.0)(typescript@6.0.2)
       '@strapi/utils': 5.42.0
       chalk: 4.1.2
       cli-table3: 0.6.5
@@ -9463,7 +9463,7 @@ snapshots:
       '@strapi/openapi': 5.42.0
       '@strapi/permissions': 5.42.0
       '@strapi/review-workflows': 5.42.0(50c85acf4900de16da78001cee6bdf86)
-      '@strapi/types': 5.42.0(@types/node@25.6.0)(pg@8.20.0)(typescript@5.4.4)
+      '@strapi/types': 5.42.0(@types/node@25.6.0)(pg@8.20.0)(typescript@6.0.2)
       '@strapi/typescript-utils': 5.42.0
       '@strapi/upload': 5.42.0(9f9157361fd54dce052d0056d51856ee)
       '@strapi/utils': 5.42.0
@@ -9564,36 +9564,6 @@ snapshots:
       - webpack-cli
       - webpack-dev-server
       - webpack-plugin-serve
-
-  '@strapi/types@5.42.0(@types/node@25.6.0)(pg@8.20.0)(typescript@5.4.4)':
-    dependencies:
-      '@casl/ability': 6.7.5
-      '@koa/cors': 5.0.0
-      '@koa/router': 12.0.2
-      '@strapi/database': 5.42.0(@types/node@25.6.0)(pg@8.20.0)
-      '@strapi/logger': 5.42.0
-      '@strapi/permissions': 5.42.0
-      '@strapi/utils': 5.42.0
-      commander: 8.3.0
-      json-logic-js: 2.0.5
-      koa: 2.16.4
-      koa-body: 6.0.1
-      node-schedule: 2.1.1
-      typedoc: 0.25.10(typescript@5.4.4)
-      typedoc-github-wiki-theme: 1.1.0(typedoc-plugin-markdown@3.17.1(typedoc@0.25.10(typescript@6.0.2)))(typedoc@0.25.10(typescript@6.0.2))
-      typedoc-plugin-markdown: 3.17.1(typedoc@0.25.10(typescript@6.0.2))
-      zod: 3.25.67
-    transitivePeerDependencies:
-      - '@types/node'
-      - better-sqlite3
-      - mysql
-      - mysql2
-      - pg
-      - pg-native
-      - sqlite3
-      - supports-color
-      - tedious
-      - typescript
 
   '@strapi/types@5.42.0(@types/node@25.6.0)(pg@8.20.0)(typescript@6.0.2)':
     dependencies:
@@ -11251,10 +11221,10 @@ snapshots:
     dependencies:
       eslint: 10.2.0(jiti@2.6.1)
 
-  eslint-plugin-prettier@5.5.5(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@10.2.0(jiti@2.6.1)))(eslint@10.2.0(jiti@2.6.1))(prettier@3.8.1):
+  eslint-plugin-prettier@5.5.5(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@10.2.0(jiti@2.6.1)))(eslint@10.2.0(jiti@2.6.1))(prettier@3.8.2):
     dependencies:
       eslint: 10.2.0(jiti@2.6.1)
-      prettier: 3.8.1
+      prettier: 3.8.2
       prettier-linter-helpers: 1.0.1
       synckit: 0.11.12
     optionalDependencies:
@@ -13329,7 +13299,7 @@ snapshots:
 
   prettier@3.3.3: {}
 
-  prettier@3.8.1: {}
+  prettier@3.8.2: {}
 
   pretty-error@4.0.0:
     dependencies:
@@ -14313,14 +14283,6 @@ snapshots:
     dependencies:
       handlebars: 4.7.9
       typedoc: 0.25.10(typescript@6.0.2)
-
-  typedoc@0.25.10(typescript@5.4.4):
-    dependencies:
-      lunr: 2.3.9
-      marked: 4.3.0
-      minimatch: 9.0.9
-      shiki: 0.14.7
-      typescript: 5.4.4
 
   typedoc@0.25.10(typescript@6.0.2):
     dependencies:
