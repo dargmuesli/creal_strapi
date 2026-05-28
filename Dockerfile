@@ -12,8 +12,6 @@ WORKDIR /srv/app/
 
 RUN corepack enable
 
-COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
-
 
 #############
 # Serve Strapi in development mode.
@@ -33,7 +31,7 @@ VOLUME /srv/.pnpm-store
 VOLUME /srv/app
 VOLUME /srv/app/node_modules
 
-ENTRYPOINT ["docker-entrypoint.sh"]
+ENTRYPOINT ["/srv/app/docker-entrypoint.sh"]
 CMD ["pnpm", "run", "develop"]
 EXPOSE 1337
 
@@ -83,6 +81,6 @@ COPY --from=lint /srv/app/package.json /dev/null
 
 USER node
 
-ENTRYPOINT ["docker-entrypoint.sh"]
+ENTRYPOINT ["/srv/app/docker-entrypoint.sh"]
 CMD ["pnpm", "run", "start"]
 EXPOSE 1337
