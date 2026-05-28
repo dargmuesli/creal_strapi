@@ -1,3 +1,9 @@
+## [4.2.10](https://github.com/dargmuesli/creal_strapi/compare/4.2.9...4.2.10) (2026-05-28)
+
+### Bug Fixes
+
+* **docker:** correct entrypoint inclusion ([c6921c9](https://github.com/dargmuesli/creal_strapi/commit/c6921c97852080d45dfcd2a51e07c3d76f77f859))
+
 ## [4.2.9](https://github.com/dargmuesli/creal_strapi/compare/4.2.8...4.2.9) (2026-05-28)
 
 ### Bug Fixes
