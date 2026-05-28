@@ -1,3 +1,10 @@
+## [4.2.9](https://github.com/dargmuesli/creal_strapi/compare/4.2.8...4.2.9) (2026-05-28)
+
+### Bug Fixes
+
+* **deps:** update dargmuesli/github-actions to v5.4.0 ([552ee95](https://github.com/dargmuesli/creal_strapi/commit/552ee95c18acfb20a0823f6059f089bdc2e5c6fe))
+* schedule release ([571db36](https://github.com/dargmuesli/creal_strapi/commit/571db36daf3d0be8030fd0876f9a5384967e25c5))
+
 ## [4.2.8](https://github.com/dargmuesli/creal_strapi/compare/4.2.7...4.2.8) (2026-05-15)
 
 ### Bug Fixes
