@@ -26,6 +26,11 @@ export interface AdminApiToken extends Struct.CollectionTypeSchema {
       Schema.Attribute.SetMinMaxLength<{
         minLength: 1
       }>
+    adminPermissions: Schema.Attribute.Relation<
+      'oneToMany',
+      'admin::permission'
+    >
+    adminUserOwner: Schema.Attribute.Relation<'manyToOne', 'admin::user'>
     createdAt: Schema.Attribute.DateTime
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private
@@ -39,6 +44,9 @@ export interface AdminApiToken extends Struct.CollectionTypeSchema {
         minLength: 1
       }>
     expiresAt: Schema.Attribute.DateTime
+    kind: Schema.Attribute.Enumeration<['content-api', 'admin']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'content-api'>
     lastUsedAt: Schema.Attribute.DateTime
     lifespan: Schema.Attribute.BigInteger
     locale: Schema.Attribute.String & Schema.Attribute.Private
@@ -56,7 +64,6 @@ export interface AdminApiToken extends Struct.CollectionTypeSchema {
     >
     publishedAt: Schema.Attribute.DateTime
     type: Schema.Attribute.Enumeration<['read-only', 'full-access', 'custom']> &
-      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'read-only'>
     updatedAt: Schema.Attribute.DateTime
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -134,6 +141,7 @@ export interface AdminPermission extends Struct.CollectionTypeSchema {
         minLength: 1
       }>
     actionParameters: Schema.Attribute.JSON & Schema.Attribute.DefaultTo<{}>
+    apiToken: Schema.Attribute.Relation<'manyToOne', 'admin::api-token'>
     conditions: Schema.Attribute.JSON & Schema.Attribute.DefaultTo<[]>
     createdAt: Schema.Attribute.DateTime
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -385,6 +393,8 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
     }
   }
   attributes: {
+    apiTokens: Schema.Attribute.Relation<'oneToMany', 'admin::api-token'> &
+      Schema.Attribute.Private
     blocked: Schema.Attribute.Boolean &
       Schema.Attribute.Private &
       Schema.Attribute.DefaultTo<false>
@@ -469,6 +479,7 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
           localized: true
         }
       }>
+    gigs: Schema.Attribute.Relation<'oneToMany', 'api::gig.gig'>
     image: Schema.Attribute.Media<'images'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -543,6 +554,79 @@ export interface ApiFaqFaq extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private
+  }
+}
+
+export interface ApiGigGig extends Struct.CollectionTypeSchema {
+  collectionName: 'gigs'
+  info: {
+    displayName: 'Gig'
+    pluralName: 'gigs'
+    singularName: 'gig'
+  }
+  options: {
+    draftAndPublish: true
+  }
+  pluginOptions: {
+    i18n: {
+      localized: true
+    }
+  }
+  attributes: {
+    createdAt: Schema.Attribute.DateTime
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private
+    dateEnd: Schema.Attribute.DateTime &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true
+        }
+      }>
+    dateStart: Schema.Attribute.DateTime &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true
+        }
+      }>
+    description: Schema.Attribute.Blocks &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true
+        }
+      }>
+    event: Schema.Attribute.Relation<'manyToOne', 'api::event.event'>
+    image: Schema.Attribute.Media<'files' | 'images'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true
+        }
+      }>
+    locale: Schema.Attribute.String
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::gig.gig'>
+    location: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true
+        }
+      }>
+    publishedAt: Schema.Attribute.DateTime
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true
+        }
+      }>
+    updatedAt: Schema.Attribute.DateTime
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private
+    url: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true
+        }
+      }>
   }
 }
 
@@ -868,12 +952,13 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
     }
   }
   attributes: {
-    alternativeText: Schema.Attribute.String
-    caption: Schema.Attribute.String
+    alternativeText: Schema.Attribute.Text
+    caption: Schema.Attribute.Text
     createdAt: Schema.Attribute.DateTime
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private
     ext: Schema.Attribute.String
+    focalPoint: Schema.Attribute.JSON
     folder: Schema.Attribute.Relation<'manyToOne', 'plugin::upload.folder'> &
       Schema.Attribute.Private
     folderPath: Schema.Attribute.String &
@@ -893,7 +978,7 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private
     mime: Schema.Attribute.String & Schema.Attribute.Required
     name: Schema.Attribute.String & Schema.Attribute.Required
-    previewUrl: Schema.Attribute.String
+    previewUrl: Schema.Attribute.Text
     provider: Schema.Attribute.String & Schema.Attribute.Required
     provider_metadata: Schema.Attribute.JSON
     publishedAt: Schema.Attribute.DateTime
@@ -902,7 +987,7 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private
-    url: Schema.Attribute.String & Schema.Attribute.Required
+    url: Schema.Attribute.Text & Schema.Attribute.Required
     width: Schema.Attribute.Integer
   }
 }
@@ -1123,6 +1208,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser
       'api::event.event': ApiEventEvent
       'api::faq.faq': ApiFaqFaq
+      'api::gig.gig': ApiGigGig
       'api::testimonial.testimonial': ApiTestimonialTestimonial
       'plugin::content-releases.release': PluginContentReleasesRelease
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction
