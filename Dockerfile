@@ -21,15 +21,18 @@ FROM base-image AS development
 ENV CI=false
 
 RUN mkdir \
-        /srv/app/node_modules \
         /srv/.pnpm-store \
-    && chown node:node \
         /srv/app/node_modules \
-        /srv/.pnpm-store
+    && chown node:node \
+        /srv/.pnpm-store \
+        /srv/app \
+        /srv/app/node_modules
 
 VOLUME /srv/.pnpm-store
 VOLUME /srv/app
 VOLUME /srv/app/node_modules
+
+USER node
 
 ENTRYPOINT ["/srv/app/docker-entrypoint.sh"]
 CMD ["pnpm", "run", "develop"]
