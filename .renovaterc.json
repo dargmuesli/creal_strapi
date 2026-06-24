@@ -1,16 +1,14 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "github>dargmuesli/renovate-config"
-  ],
+  "extends": ["github>dargmuesli/renovate-config"],
   "packageRules": [
     {
       "allowedVersions": "<=18",
-      "matchPackageNames": [
-        "react",
-        "react-dom",
-        "react-is"
-      ]
+      "matchPackageNames": ["react", "react-dom", "react-is"]
+    },
+    {
+      "allowedVersions": "<=6",
+      "matchPackageNames": ["react-router-dom"]
     }
   ]
 }
