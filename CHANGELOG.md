@@ -1,3 +1,5 @@
+## [4.2.16](https://github.com/dargmuesli/creal_strapi/compare/4.2.15...4.2.16) (2026-07-24)
+
 ## [4.2.15](https://github.com/dargmuesli/creal_strapi/compare/4.2.14...4.2.15) (2026-07-10)
 
 ## [4.2.14](https://github.com/dargmuesli/creal_strapi/compare/4.2.13...4.2.14) (2026-07-03)
