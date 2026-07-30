@@ -45,7 +45,8 @@ FROM base-image AS prepare
 
 COPY ./pnpm-lock.yaml ./package.json ./pnpm-workspace.yaml ./
 
-RUN pnpm fetch
+RUN --mount=type=cache,id=pnpm-store,target=/root/.local/share/pnpm/store \
+    pnpm fetch
 
 COPY ./ ./
 
@@ -73,7 +74,8 @@ RUN pnpm run build \
 ################################################################################
 FROM build AS production
 
-RUN apk add --no-cache vips-dev
+RUN --mount=type=cache,id=apk-cache,target=/var/cache/apk \
+    apk add --no-cache vips-dev
 
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
